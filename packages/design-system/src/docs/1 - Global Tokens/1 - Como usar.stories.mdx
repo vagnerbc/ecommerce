@@ -1,0 +1,44 @@
+<Meta title="Global Tokens/1 - Como usar?" />
+
+# Tokens
+
+<br />
+
+## Como usar?
+
+Design Tokens são variáveis semânticas de estilo que utilizamos para armazenar atributos de design visual, garantindo propriedades únicas a fim de manter um sistema visual escalonável e consistente para o desenvolvimento das nossas interfaces.
+
+<br />
+
+## Como definimos as variáveis?
+
+Para entender melhor como definimos nossas variáveis, é preciso entender a estrutura de um estilo.
+
+| `$color-brand-orange` | =   | `#EA7603` |
+| --------------------- | --- | --------- |
+| **Semântica**         |     | **Valor** |
+
+<br />
+
+## Estrutura da variável
+
+**Semântica** = O tipo do estilo, como cor, tipografia, sombra, opacidade, espaçamentos e efeitos.
+**Valor** = É a propriedade que gera a característica visual do estilo, como um hexadecimal, pixel ou peso.
+
+<br />
+
+## Como funciona na prática?
+
+No lugar de valores codificados como hexadecimais para cores ou pixels para espaçamentos, criamos propriedades fixas associadas e nomeadas de acordo com tipo de cada estilo.
+
+Por exemplo, ao invés de dizermos que uma cor contém o valor hexadecimal **`#EA7603`**, criamos uma variável para representar a informação que no caso será "**`$color-brand-orange`**" e dentro dela atribuirmos o valor **`#EA7603`**.
+
+Desta forma toda vez que quisermos nos referir a essa cor, ao invés de usarmos o código hexadecimal utilizaremos a variável **`$color-brand-orange`** e se por acaso futuramente entendermos que o tom da cor precisa ser ajustado, alteraremos apenas o valor que está dentro da variável e assim todos os componentes onde ela está aplicada serão ajudados automaticamente, evitando um retrabalho tanto nos nossos protótipos quanto no código em si.
+
+<br />
+
+## Como utilizamos os tokens?
+
+Agora que já entendemos como os tokens (variáveis semânticas de estilo) funcionam e como os definimos, vamos entender melhor como eles devem ser utilizados na implementação da folha de estilos do nosso Design System.
+
+Todos os nossos componentes são desenhados com base nos tokens que temos definidos, ou seja, a cor de um botão está linkada automaticamente a cor do tokens nela utilizado e o mesmo deve ser feito no desenvolvimento. Assim garantimos esse sincronismo entre design e código.

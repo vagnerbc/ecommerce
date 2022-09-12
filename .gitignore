@@ -1,0 +1,14 @@
+# Folders
+node_modules
+dist
+out
+
+# IDEs
+.idea
+
+# Logs
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+lerna-debug.log*
+

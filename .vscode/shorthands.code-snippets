@@ -1,0 +1,94 @@
+{
+  "Estrutura do jest para React": {
+    "scope": "javascriptreact, typescriptreact",
+    "prefix": "jest-react",
+    "body": [
+      "import { render, screen } from 'jest/utils/test-utils'",
+      "",
+      "describe('$1', () => {",
+      "\ttest('$2', () => {",
+      "\t\trender($3)",
+      "\t\texpect($4).toBeTruthy()",
+      "\t})",
+      "})"
+    ],
+    "description": "Estrutura do jest para React"
+  },
+  "Estrutura do jest para lógicas": {
+    "scope": "javascript, typescript",
+    "prefix": "jest-default",
+    "body": [
+      "describe('$1', () => {",
+      "\ttest('$2', () => {",
+      "\t\texpect($4).toBeTruthy()",
+      "\t})",
+      "})"
+    ],
+    "description": "Estrutura do jest para lógicas"
+  },
+  "Estrutura de um componente React": {
+    "scope": "javascriptreact, typescriptreact",
+    "prefix": "component",
+    "body": [
+      "import {} from 'store'",
+      "import {} from '@ecommerce/design-system'",
+      "",
+      "export const ${TM_DIRECTORY/^.+\\/(.*)$/$1/} = () => {",
+      "\treturn <></>",
+      "}",
+      ""
+    ],
+    "description": "Estrutura de um componente React"
+  },
+  "Estrutura de um componente memoizado React": {
+    "scope": "javascriptreact, typescriptreact",
+    "prefix": "component-memo",
+    "body": [
+      "import { memo } from 'react'",
+      "import {} from 'store'",
+      "import {} from '@ecommerce/design-system'",
+      "",
+      "const ${TM_DIRECTORY/^.+\\/(.*)$/$1/} = () => {",
+      "\treturn <></>",
+      "}",
+      "",
+      "export default memo(${TM_DIRECTORY/^.+\\/(.*)$/$1/})",
+      ""
+    ],
+    "description": "Estrutura de um componente memoizado React"
+  },
+  "Estrutura de um hook React": {
+    "scope": "javascript, typescript",
+    "prefix": "hook",
+    "body": [
+      "import { useEffect } from 'react'",
+      "",
+      "export const useMyHook = () => {",
+      "\tconst handleAction = () => {}",
+      "",
+      "\tuseEffect(() => {",
+      "\t\thandleAction()",
+      "\t}, [])",
+      "}",
+      ""
+    ],
+    "description": "Estrutura de um componente React"
+  },
+  "Estrutura useState": {
+    "scope": "javascriptreact, typescriptreact",
+    "prefix": "use-state",
+    "body": ["const [ ${1}, set${1/(.*)/${1:/capitalize}/} ] = useState()"],
+    "description": "Estrutura useState"
+  },
+  "Estrutura função with de mock": {
+    "scope": "javascript, typescript",
+    "prefix": "with-mock",
+    "body": [
+      "with${1/(.*)/${1:/capitalize}/}(value: string) {",
+      "\tthis.${1} = value",
+      "\treturn this",
+      "}"
+    ],
+    "description": "Estrutura função with de mock"
+  }
+}

@@ -1,0 +1,95 @@
+# **Input**
+
+Deve ser utilizado sempre que houver a **possibilidade do usuário inserir informações curtas**, como descrições, resumos, etc.
+
+<br />
+
+## Anatomy
+
+O Input é formado com base nos Global Tokens.
+
+<br />
+
+### Input sem ícone - Estilo Outline
+
+| Variante | State          | Size     | Container (Fill color)           | Icon                      | Addon                       | Text                    | Text Color (Placeholder)       | Icon Erro Color                  | Border Radius           | Border (Weight / Stroke Color)                               | Opacity                     | Exemplo   |
+| :------- | :------------- | :------- | :------------------------------- | :------------------------ | :-------------------------- | :---------------------- | :----------------------------- | :------------------------------- | :---------------------- | :----------------------------------------------------------- | :-------------------------- | :-------- |
+| Outline  | Default        | sm md lg | **`$standard-color-white`**      | None Left Icon Right Icon | None Left Addon Right Addon | **`$font-family-base`** | **`$neutral-color-dark`**      | '---'                            | **`$border-radius-sm`** | **`$border-width-hairline`** **`$neutral-color-mediumdark`** | '----'                      | _[embed]_ |
+| Outline  | Hover          | sm md lg | **`$standard-color-white`**      | None Left Icon Right Icon | None Left Addon Right Addon | **`$font-family-base`** | **`$neutral-color-dark`**      | '---'                            | **`$border-radius-sm`** | **`$border-width-hairline`** **`$neutral-color-darkest`**    | '----'                      | _[embed]_ |
+| Outline  | Active / Focus | sm md lg | **`$neutral-color-lightest`**    | None Left Icon Right Icon | None Left Addon Right Addon | **`$font-family-base`** | **`$neutral-color-darkest`**   | '----'                           | **`$border-radius-sm`** | **`$border-width-thin`** **`$brand-color-primary-default`**  | '----'                      | _[embed]_ |
+| Outline  | Invalid        | sm md lg | **`$neutral-color-lightest`**    | None Left Icon Right Icon | None Left Addon Right Addon | **`$font-family-base`** | **`$neutral-color-darkest`**   | **`$feedback-color-error-dark`** | **`$border-radius-sm`** | **`$border-width-thin`** **`$feedback-color-error-dark`**    | '---'                       | _[embed]_ |
+| Outline  | Disabled       | sm md lg | **`$neutral-color-mediumlight`** | None Left Icon Right Icon | None Left Addon Right Addon | **`$font-family-base`** | **`$neutral-color-extradark`** | '---'                            | **`$border-radius-sm`** | **`$border-width-hairline`** **`$neutral-color-extradark`**  | **`$opacity-level-medium`** | _[embed]_ |
+
+<br />
+
+### Input com ícone - Estilo Outline
+
+| Variante | State          | Size     | Container (Fill color)           | Icon                      | Addon                       | Text                    | Icon Color                     | Text Color (Placeholder)       | Icon Erro Color                  | Border Radius           | Border (Weight / Stroke Color)                               | Opacity                     | Exemplo   |
+| :------- | :------------- | :------- | :------------------------------- | :------------------------ | :-------------------------- | :---------------------- | :----------------------------- | :----------------------------- | :------------------------------- | :---------------------- | :----------------------------------------------------------- | :-------------------------- | :-------- |
+| Outline  | Default        | sm md lg | **`$standard-color-white`**      | None Left Icon Right Icon | None Left Addon Right Addon | **`$font-family-base`** | **`$neutral-color-default`**   | **`$neutral-color-dark`**      | '---'                            | **`$border-radius-sm`** | **`$border-width-hairline`** **`$neutral-color-mediumdark`** | '----'                      | _[embed]_ |
+| Outline  | Hover          | sm md lg | **`$standard-color-white`**      | None Left Icon Right Icon | None Left Addon Right Addon | **`$font-family-base`** | **`$neutral-color-default`**   | **`$neutral-color-dark`**      | '---'                            | **`$border-radius-sm`** | **`$border-width-hairline`** **`$neutral-color-darkest`**    | '----'                      | _[embed]_ |
+| Outline  | Active / Focus | sm md lg | **`$neutral-color-lightest`**    | None Left Icon Right Icon | None Left Addon Right Addon | **`$font-family-base`** | **`$neutral-color-default`**   | **`$neutral-color-darkest`**   | '----'                           | **`$border-radius-sm`** | **`$border-width-thin`** **`$brand-color-primary-default`**  | '----'                      | _[embed]_ |
+| Outline  | Invalid        | sm md lg | **`$neutral-color-lightest`**    | None Left Icon Right Icon | None Left Addon Right Addon | **`$font-family-base`** | **`$neutral-color-default`**   | **`$neutral-color-darkest`**   | **`$feedback-color-error-dark`** | **`$border-radius-sm`** | **`$border-width-thin`** **`$feedback-color-error-dark`**    | '---'                       | _[embed]_ |
+| Outline  | Disabled       | sm md lg | **`$neutral-color-mediumlight`** | None Left Icon Right Icon | None Left Addon Right Addon | **`$font-family-base`** | **`$neutral-color-extradark`** | **`$neutral-color-extradark`** | '---'                            | **`$border-radius-sm`** | **`$border-width-hairline`** **`$neutral-color-extradark`**  | **`$opacity-level-medium`** | _[embed]_ |
+
+<br />
+
+### Input com addon - Estilo Outline
+
+| Variante | State          | Size     | Container (Fill color)           | Icon                      | Addon                       | Addon (Fill color)            | Addon (Text color)             | Text                    | Text Color (Placeholder)       | Icon Erro Color                  | Border Radius           | Border (Weight / Stroke Color)                               | Opacity                     | Exemplo   |
+| :------- | :------------- | :------- | :------------------------------- | :------------------------ | :-------------------------- | :---------------------------- | ------------------------------ | ----------------------- | :----------------------------- | :------------------------------- | :---------------------- | :----------------------------------------------------------- | :-------------------------- | :-------- |
+| Outline  | Default        | sm md lg | **`$standard-color-white`**      | None Left Icon Right Icon | None Left Addon Right Addon | **`$neutral-color-lightest`** | **`$neutral-color-extradark`** | **`$font-family-base`** | **`$neutral-color-dark`**      | '---'                            | **`$border-radius-sm`** | **`$border-width-hairline`** **`$neutral-color-mediumdark`** | '----'                      | _[embed]_ |
+| Outline  | Hover          | sm md lg | **`$standard-color-white`**      | None Left Icon Right Icon | None Left Addon Right Addon | **`$neutral-color-lightest`** | **`$neutral-color-extradark`** | **`$font-family-base`** | **`$neutral-color-dark`**      | '---'                            | **`$border-radius-sm`** | **`$border-width-hairline`** **`$neutral-color-darkest`**    | '----'                      | _[embed]_ |
+| Outline  | Active / Focus | sm md lg | **`$neutral-color-lightest`**    | None Left Icon Right Icon | None Left Addon Right Addon | **`$neutral-color-lightest`** | **`$neutral-color-extradark`** | **`$font-family-base`** | **`$neutral-color-darkest`**   | '----'                           | **`$border-radius-sm`** | **`$border-width-thin`** **`$brand-color-primary-default`**  | '----'                      | _[embed]_ |
+| Outline  | Invalid        | sm md lg | **`$neutral-color-lightest`**    | None Left Icon Right Icon | None Left Addon Right Addon | **`$neutral-color-lightest`** | **`$neutral-color-extradark`** | **`$font-family-base`** | **`$neutral-color-darkest`**   | **`$feedback-color-error-dark`** | **`$border-radius-sm`** | **`$border-width-thin`** **`$feedback-color-error-dark`**    | '---'                       | _[embed]_ |
+| Outline  | Disabled       | sm md lg | **`$neutral-color-mediumlight`** | None Left Icon Right Icon | None Left Addon Right Addon | **`$neutral-color-lightest`** | **`$neutral-color-extradark`** | **`$font-family-base`** | **`$neutral-color-extradark`** | '---'                            | **`$border-radius-sm`** | **`$border-width-hairline`** **`$neutral-color-extradark`**  | **`$opacity-level-medium`** | _[embed]_ |
+
+<br />
+
+### Input sem ícone - Estilo Filled
+
+| Variante | State          | Size     | Container (Fill color)           | Icon                      | Text                    | Text Color (Placeholder)       | Icon Erro Color                  | Border Radius           | Border (Weight / Stroke Color)                              | Opacity                     | Exemplo   |
+| :------- | :------------- | :------- | :------------------------------- | :------------------------ | :---------------------- | :----------------------------- | :------------------------------- | :---------------------- | :---------------------------------------------------------- | :-------------------------- | :-------- |
+| Filled   | Default        | sm md lg | **`$neutral-color-mediumlight`** | None Left Icon Right Icon | **`$font-family-base`** | **`$neutral-color-extradark`** | '---'                            | **`$border-radius-sm`** | '---'                                                       | '----'                      | _[embed]_ |
+| Filled   | Hover          | sm md lg | **`$standard-color-white`**      | None Left Icon Right Icon | **`$font-family-base`** | **`$neutral-color-extradark`** | '---'                            | **`$border-radius-sm`** | '---'                                                       | '----'                      | _[embed]_ |
+| Filled   | Active / Focus | sm md lg | **`$neutral-color-lightest`**    | None Left Icon Right Icon | **`$font-family-base`** | **`$neutral-color-darkest`**   | '----'                           | **`$border-radius-sm`** | **`$border-width-thin`** **`$brand-color-primary-default`** | '----'                      | _[embed]_ |
+| Filled   | Invalid        | sm md lg | **`$neutral-color-lightest`**    | None Left Icon Right Icon | **`$font-family-base`** | **`$neutral-color-darkest`**   | **`$feedback-color-error-dark`** | **`$border-radius-sm`** | **`$border-width-thin`** **`$feedback-color-error-dark`**   | '---'                       | _[embed]_ |
+| Filled   | Disabled       | sm md lg | **`$neutral-color-mediumlight`** | None Left Icon Right Icon | **`$font-family-base`** | **`$neutral-color-extradark`** | '---'                            | **`$border-radius-sm`** | '---'                                                       | **`$opacity-level-medium`** | _[embed]_ |
+
+<br />
+
+### Input com ícone - Estilo Flushed
+
+| Variante | State          | Size     | Container (Fill color)      | Icon                      | Text                    | Icon Color                   | Text Color (Placeholder)       | Icon Erro Color                  | Border Radius             | Border-bottom (Weight / Stroke Color)                        | Opacity                     | Exemplo   |
+| :------- | :------------- | :------- | :-------------------------- | ------------------------- | :---------------------- | ---------------------------- | :----------------------------- | -------------------------------- | :------------------------ | :----------------------------------------------------------- | :-------------------------- | :-------- |
+| Flushed  | Default        | sm md lg | **`$standard-color-white`** | None Left Icon Right Icon | **`$font-family-base`** | **`$neutral-color-default`** | **`$neutral-color-dark`**      | '---'                            | **`$border-radius-none`** | **`$border-width-hairline`** **`$neutral-color-mediumdark`** | '----'                      | _[embed]_ |
+| Flushed  | Hover          | sm md lg | **`$standard-color-white`** | None Left Icon Right Icon | **`$font-family-base`** | **`$neutral-color-default`** | **`$neutral-color-dark`**      | '---'                            | **`$border-radius-none`** | **`$border-width-hairline`** **`$neutral-color-darkest`**    | '----'                      | _[embed]_ |
+| Flushed  | Active / Focus | sm md lg | **`$standard-color-white`** | None Left Icon Right Icon | **`$font-family-base`** | **`$neutral-color-default`** | **`$neutral-color-darkest`**   | '----'                           | **`$border-radius-none`** | **`$border-width-thin`** **`$brand-color-primary-default`**  | '----'                      | _[embed]_ |
+| Flushed  | Invalid        | sm md lg | **`$standard-color-white`** | None Left Icon Right Icon | **`$font-family-base`** | **`$neutral-color-default`** | **`$neutral-color-darkest`**   | **`$feedback-color-error-dark`** | **`$border-radius-none`** | **`$border-width-thin`** **`$feedback-color-error-dark`**    | '---'                       | _[embed]_ |
+| Flushed  | Disabled       | sm md lg | **`$standard-color-white`** | None Left Icon Right Icon | **`$font-family-base`** | **`$neutral-color-default`** | **`$neutral-color-extradark`** | '---'                            | **`$border-radius-none`** | **`$border-width-thin`** **`$brand-color-primary-default`**  | **`$opacity-level-medium`** | _[embed]_ |
+
+<br />
+
+### Input sem ícone - Estilo Flushed
+
+| Variant | State          | Size     | Container (Fill color)      | Icon                      | Text                    | Text Color (Placeholder)       | Icon Erro Color                  | Border Radius             | Border-bottom (Weight / Stroke Color)                           | Opacity                     | Exemplo   |
+| :------ | :------------- | :------- | :-------------------------- | :------------------------ | :---------------------- | :----------------------------- | :------------------------------- | :------------------------ | :-------------------------------------------------------------- | :-------------------------- | :-------- |
+| Flushed | Default        | sm md lg | **`$standard-color-white`** | None Left Icon Right Icon | **`$font-family-base`** | **`$neutral-color-dark`**      | '---'                            | **`$border-radius-none`** | **`$border-width-hairline`** **`$neutral-color-mediumdark`**    | '----'                      | _[embed]_ |
+| Flushed | Hover          | sm md lg | **`$standard-color-white`** | None Left Icon Right Icon | **`$font-family-base`** | **`$neutral-color-dark`**      | '---'                            | **`$border-radius-none`** | **`$border-width-hairline`** **`$neutral-color-darkest`**       | '----'                      | _[embed]_ |
+| Flushed | Active / Focus | sm md lg | **`$standard-color-white`** | None Left Icon Right Icon | **`$font-family-base`** | **`$neutral-color-darkest`**   | '----'                           | **`$border-radius-none`** | **`$border-width-thin`** **`$brand-color-primary-default`**     | '----'                      | _[embed]_ |
+| Flushed | Invalid        | sm md lg | **`$standard-color-white`** | None Left Icon Right Icon | **`$font-family-base`** | **`$neutral-color-darkest`**   | **`$feedback-color-error-dark`** | **`$border-radius-none`** | **`$border-width-thin`** **`$feedback-color-error-dark`**       | '---'                       | _[embed]_ |
+| Flushed | Disabled       | sm md lg | **`$standard-color-white`** | None Left Icon Right Icon | **`$font-family-base`** | **`$neutral-color-extradark`** | '---'                            | **`$border-radius-none`** | **`$border-width-hairline`** **`$brand-color-primary-default`** | **`$opacity-level-medium`** | _[embed]_ |
+
+<br />
+
+## Do
+
+1. Use em formulários para permitir as pessoas inserirem informações;
+2. Podem fazer parte de componentes como modais no caso de um modal de login, por exemplo;
+3. Os tipos de entrada de texto comuns incluem: nomes de pessoas usuárias, descrições, URLs, e-mails, endereços e qualquer outra forma de inserção de informação.
+
+<br />
+
+## Dont't
+
+1. Não utilize para entrada de informações longas, para isso utilize textarea.

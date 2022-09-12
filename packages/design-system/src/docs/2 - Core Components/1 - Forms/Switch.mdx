@@ -1,0 +1,33 @@
+# **Switch**
+
+O componente **Switch** é usado como alternativa ao componente Checkbox. Você pode alternar entre os estados ativado ou desativado.
+
+<br />
+
+## Anatomy
+
+O Switch é formado com base nos Global Tokens.
+
+| State              | Size     | Label      | Text label              | Text label Color               | Text Weight                | Container (Fill color)             | Outline (Weight / Border Radius / Stroke Color)                               | Icon Color                  | Border Radius             | Opacity                      | Exemplo   |
+| :----------------- | :------- | :--------- | :---------------------- | :----------------------------- | :------------------------- | :--------------------------------- | :---------------------------------------------------------------------------- | :-------------------------- | :------------------------ | :--------------------------- | :-------- |
+| Default            | sm md lg | True False | **`$font-family-base`** | **`$neutral-color-extradark`** | **`$font-weight-regular`** | **`$neutral-color-dark`**          | '---'                                                                         | **`$standard-color-white`** | **`$border-radius-pill`** | '---'                        | _[embed]_ |
+| Focus              | sm md lg | True False | **`$font-family-base`** | **`$neutral-color-extradark`** | **`$font-weight-regular`** | **`$neutral-color-dark`**          | **`$border-width-thin $border-radius-sm`** **`$neutral-color-darkest`**       | **`$standard-color-white`** | **`$border-radius-pill`** | '---'                        | _[embed]_ |
+| Disabled           | sm md lg | True False | **`$font-family-base`** | **`$neutral-color-extradark`** | **`$font-weight-regular`** | **`$neutral-color-default`**       | '---'                                                                         | **`$standard-color-white`** | **`$border-radius-pill`** | **`$opacity-level-intense`** | _[embed]_ |
+| isChecked          | sm md lg | True False | **`$font-family-base`** | **`$neutral-color-extradark`** | **`$font-weight-bold`**    | **`$brand-color-primary-default`** | '---'                                                                         | **`$standard-color-white`** | **`$border-radius-pill`** | '---'                        | _[embed]_ |
+| isChecked Focus    | sm md lg | True False | **`$font-family-base`** | **`$neutral-color-extradark`** | **`$font-weight-bold`**    | **`$brand-color-primary-default`** | **`$border-width-thin`** **`$border-radius-sm`** **`$neutral-color-darkest`** | **`$standard-color-white`** | **`$border-radius-pil`**  | '---'                        | _[embed]_ |
+| isChecked Disabled | sm md lg | True False | **`$font-family-base`** | **`$neutral-color-extradark`** | **`$font-weight-bold`**    | **`$brand-color-primary-default`** | '---'                                                                         | **`$standard-color-white`** | **`$border-radius-pill`** | **`$opacity-level-intense`** | _[embed]_ |
+
+<br />
+
+## Do
+
+Os switch devem ser usados em situações onde os usuários precisam:
+
+1. Ativar ou desativar uma opção de configuração;
+2. Indicar seleções de opções binárias, como um sim ou não.
+
+<br />
+
+## Dont't
+
+Os switch não devem ser utilizados quando for necessário selecionar uma ou mais opções dentro de uma lista. Em vez disso, utilize checkbox ou radiobutton.

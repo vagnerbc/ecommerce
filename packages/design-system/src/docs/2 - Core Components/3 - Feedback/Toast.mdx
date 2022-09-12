@@ -1,0 +1,60 @@
+# **Toast**
+
+O **toast** é usado para mostrar alertas sobre uma sobreposição. O **toast** se fechará quando o botão Fechar for clicado ou após um tempo limite - **_o padrão é 5 segundos_**. O componente **toast** é usado para fornecer feedback aos usuários após a ocorrência de uma ação.
+
+<br />
+
+## Anatomy
+
+Os **toast** são formados com base nos Global Tokens.
+
+<br />
+
+### Toast - Success
+
+| Variant                | State   | Description | Closable   | Container (Fill color)                   | Text                    | Text Weight                | Text Color                   | Title         | Title Weight            | Title Color                  | Icon e Accent Color                     | Icon Close Color             | Border Radius           | Exemplo   |
+| :--------------------- | :------ | :---------- | :--------- | :--------------------------------------- | :---------------------- | :------------------------- | :--------------------------- | :------------ | :---------------------- | :--------------------------- | :-------------------------------------- | :--------------------------- | :---------------------- | :-------- |
+| Solid                  | Success | True False  | True False | **`$feedback-color-success-mediumdark`** | **`$font-family-base`** | **`$font-weight-regular`** | **`$standard-color-white`**  | None Left Top | **`$font-weight-bold`** | **`$standard-color-white`**  | **`$standard-color-white`**             | **`$standard-color-white`**  | **`$border-radius-sm`** | _[embed]_ |
+| Subtle                 | Success | True False  | True False | **`$feedback-color-success-lightest`**   | **`$font-family-base`** | **`$font-weight-regular`** | **`$neutral-color-darkest`** | None Left Top | **`$font-weight-bold`** | **`$neutral-color-darkest`** | **`$feedback-color-success-extradark`** | **`$neutral-color-darkest`** | **`$border-radius-sm`** | _[embed]_ |
+| Left-accent Top-accent | Success | True False  | True False | **`$feedback-color-success-lightest`**   | **`$font-family-base`** | **`$font-weight-regular`** | **`$neutral-color-darkest`** | None Left Top | **`$font-weight-bold`** | **`$neutral-color-darkest`** | **`$feedback-color-success-extradark`** | **`$neutral-color-darkest`** | **`$border-radius-sm`** | _[embed]_ |
+
+<br />
+
+### Toast - Warning
+
+| Variant                | State   | Description | Closable   | Container (Fill color)                 | Text                    | Text Weight                | Text Color                   | Title         | Title Weight            | Title Color                  | Icon e Accent Color                     | Icon Close Color             | Border Radius           | Exemplo   |
+| :--------------------- | :------ | :---------- | :--------- | :------------------------------------- | :---------------------- | :------------------------- | :--------------------------- | :------------ | :---------------------- | :--------------------------- | :-------------------------------------- | :--------------------------- | :---------------------- | :-------- |
+| Solid                  | Warning | True False  | True False | **`$feedback-color-warning-default`**  | **`$font-family-base`** | **`$font-weight-regular`** | **`$neutral-color-darkest`** | None Left Top | **`$font-weight-bold`** | **`$neutral-color-darkest`** | **`$neutral-color-darkest`**            | **`$neutral-color-darkest`** | **`$border-radius-sm`** | _[embed]_ |
+| Subtle                 | Warning | True False  | True False | **`$feedback-color-warning-lightest`** | **`$font-family-base`** | **`$font-weight-regular`** | **`$neutral-color-darkest`** | None Left Top | **`$font-weight-bold`** | **`$neutral-color-darkest`** | **`$feedback-color-warning-extradark`** | **`$neutral-color-darkest`** | **`$border-radius-sm`** | _[embed]_ |
+| Left-accent Top-accent | Warning | True False  | True False | **`$feedback-color-warning-lightest`** | **`$font-family-base`** | **`$font-weight-regular`** | **`$neutral-color-darkest`** | None Left Top | **`$font-weight-bold`** | **`$neutral-color-darkest`** | **`$feedback-color-warning-extradark`** | **`$neutral-color-darkest`** | **`$border-radius-sm`** | _[embed]_ |
+
+<br />
+
+### Toast - Error
+
+| Variant                | State | Description | Closable   | Container (Fill color)                  | Text                    | Text Weight                | Text Color                   | Title         | Title Weight            | Title Color                  | Icon e Accent Color              | Icon Close Color             | Border Radius           | Exemplo   |
+| :--------------------- | :---- | :---------- | :--------- | :-------------------------------------- | :---------------------- | :------------------------- | :--------------------------- | :------------ | :---------------------- | :--------------------------- | :------------------------------- | :--------------------------- | :---------------------- | :-------- |
+| Solid                  | Error | True False  | True False | **`$feedback-color-error-mediumlight`** | **`$font-family-base`** | **`$font-weight-regular`** | **`$standard-color-white`**  | None Left Top | **`$font-weight-bold`** | **`$standard-color-white`**  | **`$standard-color-white`**      | **`$standard-color-white`**  | **`$border-radius-sm`** | _[embed]_ |
+| Subtle                 | Error | True False  | True False | **`$support-color-tertiary-light`**     | **`$font-family-base`** | **`$font-weight-regular`** | **`$neutral-color-darkest`** | None Left Top | **`$font-weight-bold`** | **`$neutral-color-darkest`** | **`$feedback-color-error-dark`** | **`$neutral-color-darkest`** | **`$border-radius-sm`** | _[embed]_ |
+| Left-accent Top-accent | Error | True False  | True False | **`$support-color-tertiary-light`**     | **`$font-family-base`** | **`$font-weight-regular`** | **`$neutral-color-darkest`** | None Left Top | **`$font-weight-bold`** | **`$neutral-color-darkest`** | **`$feedback-color-error-dark`** | **`$neutral-color-darkest`** | **`$border-radius-sm`** | _[embed]_ |
+
+<br />
+
+### Toast - Info
+
+| Variant                | State | Description | Closable   | Container (Fill color)                      | Text                    | Text Weight                | Text Color                   | Title         | Title Weight            | Title Color                  | Icon e Accent Color                         | Icon Close Color             | Border Radius           | Exemplo   |
+| :--------------------- | :---- | :---------- | :--------- | :------------------------------------------ | :---------------------- | :------------------------- | :--------------------------- | :------------ | :---------------------- | :--------------------------- | :------------------------------------------ | :--------------------------- | :---------------------- | :-------- |
+| Solid                  | Info  | True False  | True False | **`$feedback-color-information-extradark`** | **`$font-family-base`** | **`$font-weight-regular`** | **`$standard-color-white`**  | None Left Top | **`$font-weight-bold`** | **`$standard-color-white`**  | **`$standard-color-white`**                 | **`$standard-color-white`**  | **`$border-radius-sm`** | _[embed]_ |
+| Subtle                 | Info  | True False  | True False | **`$feedback-color-information-lightest`**  | **`$font-family-base`** | **`$font-weight-regular`** | **`$neutral-color-darkest`** | None Left Top | **`$font-weight-bold`** | **`$neutral-color-darkest`** | **`$feedback-color-information-extradark`** | **`$neutral-color-darkest`** | **`$border-radius-sm`** | _[embed]_ |
+| Left-accent Top-accent | Info  | True False  | True False | **`$feedback-color-information-lightest`**  | **`$font-family-base`** | **`$font-weight-regular`** | **`$neutral-color-darkest`** | None Left Top | **`$font-weight-bold`** | **`$neutral-color-darkest`** | **`$feedback-color-information-extradark`** | **`$neutral-color-darkest`** | **`$border-radius-sm`** | _[embed]_ |
+
+<br />
+
+## Do
+
+1. Podem aparecer temporariamente na parte inferior da tela;
+2. Utilize o Toast Success para alertas positivos;
+3. Utilize o Toast Warning para alertas neutros;
+4. Utilize o Toast Error para alertas negativos ou erros;
+5. Utilize o Toast Info para alertas informativos;
+6. Mantenha a mensagem concisa e clara, evitando colocar mais frases com mais de uma linha no título.

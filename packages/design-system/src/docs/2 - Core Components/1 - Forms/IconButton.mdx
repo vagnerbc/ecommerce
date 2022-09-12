@@ -1,0 +1,57 @@
+# **Icon Button**
+
+São elementos clicáveis ​​usados ​​para **habilitar funções ou atalhos para contextos externos.** Devem conter um ícone que represente com exatidão a ação a ser realizada, sem nenhuma label.
+
+<br />
+
+## Anatomy
+
+O Button Icon é formado com base nos Global Tokens.
+
+<br />
+
+## Button Icon Primary
+
+| Token                      | Variant | State          | Size        | Round      | Dot        | Dot (Fill color)                 | Dot (Text color)               | Container (Fill color)              | Icon Color                     | Border Radius           | Border (Weight / Stroke Color) | Outline (Weight / Border Radius / Stroke Color)                               | Opacity                      | Exemplo   |
+| :------------------------- | :------ | :------------- | :---------- | :--------- | :--------- | :------------------------------- | ------------------------------ | :---------------------------------- | :----------------------------- | :---------------------- | :----------------------------- | ----------------------------------------------------------------------------- | :--------------------------- | :-------- |
+| **`$button-icon-primary`** | Solid   | Default        | xs sm md lg | True False | True False | **`$feedback-color-error-dark`** | **`$standard-color-white`**    | **`$brand-color-primary-default`**  | \*\*`$standard-color-white     | **`$border-radius-sm`** | **`$border-radius-none`**      | '----'                                                                        | '----'                       | _[embed]_ |
+| **`$button-icon-primary`** | Solid   | Hover          | xs sm md lg | True False | True False | **`$feedback-color-error-dark`** | **`$standard-color-white`**    | **`$brand-color-primary-light`**    | **`$standard-color-white`**    | **`$border-radius-sm`** | **`$border-radius-none`**      | '----'                                                                        | '----'                       | _[embed]_ |
+| **`$button-icon-primary`** | Solid   | Active / Focus | xs sm md lg | True False | True False | **`$feedback-color-error-dark`** | **`$standard-color-white`**    | **`$brand-color-primary-lightest`** | **`$neutral-color-darkest`**   | **`$border-radius-sm`** | **`$border-radius-none`**      | **`$border-width-thin`** **`$border-radius-sm`** **`$neutral-color-darkest`** | '----'                       | _[embed]_ |
+| **`$button-icon-primary`** | Solid   | Disabled       | xs sm md lg | True False | True False | **`$neutral-color-light`**       | **`$neutral-color-extradark`** | **`$neutral-color-mediumlight`**    | **`$neutral-color-extradark`** | **`$border-radius-sm`** | **`$border-radius-none`**      | '----'                                                                        | **`$opacity-level-intense`** | _[embed]_ |
+
+<br />
+
+## Button Icon Tertiary
+
+| Token                       | Variant | State          | Size        | Round      | Dot        | Dot (Fill color)                 | Dot (Text color)               | Container (Fill color)              | Icon Color                     | Border Radius           | Border (Weight / Stroke Color)                                   | Outline (Weight / Border Radius / Stroke Color)                         | Opacity                      | Owner     |
+| :-------------------------- | :------ | :------------- | :---------- | :--------- | :--------- | :------------------------------- | :----------------------------- | :---------------------------------- | :----------------------------- | :---------------------- | :--------------------------------------------------------------- | :---------------------------------------------------------------------- | :--------------------------- | :-------- |
+| **`$button-icon-tertiary`** | Outline | Default        | xs sm md lg | True False | True False | **`$feedback-color-error-dark`** | **`$standard-color-white`**    | transparent                         | **`$neutral-color-extradark`** | **`$border-radius-sm`** | **`$border-width-hairline`** **`$neutral-color-mediumdark`**     | '----'                                                                  | '----'                       | _[embed]_ |
+| **`$button-icon-tertiary`** | Outline | Hover          | xs sm md lg | True False | True False | **`$feedback-color-error-dark`** | **`$standard-color-white`**    | **`$brand-color-primary-light`**    | **`$standard-color-white`**    | **`$border-radius-sm`** | **`$border-width-hairline`** **`$brand-color-primary-light`**    | '----'                                                                  | '----'                       | _[embed]_ |
+| **`$button-icon-tertiary`** | Outline | Active / Focus | xs sm md lg | True False | True False | **`$feedback-color-error-dark`** | **`$standard-color-white`**    | **`$brand-color-primary-lightest`** | **`$neutral-color-darkest`**   | **`$border-radius-sm`** | **`$border-width-hairline`** **`$brand-color-primary-lightest`** | **`$border-width-thin $border-radius-sm`** **`$neutral-color-darkest`** | '----'                       | _[embed]_ |
+| **`$button-icon-tertiary`** | Outline | Disabled       | xs sm md lg | True False | True False | **`$neutral-color-light`**       | **`$neutral-color-extradark`** | **` $neutral-color-mediumlight`**   | **`$neutral-color-extradark`** | **`$border-radius-sm`** | **`$border-width-hairline`** **`$neutral-color-mediumdark`**     | '----'                                                                  | **`$opacity-level-intense`** | _[embed]_ |
+
+<br />
+
+## Button Icon Ghost
+
+| Token                    | Variant | State          | Size        | Round      | Dot        | Dot (Fill color)                 | Dot (Text color)               | Container (Fill color)        | Icon Color                     | Border Radius           | Outline (Weight / Border Radius / Stroke Color)                               | Opacity                      | Exemplo |
+| :----------------------- | :------ | :------------- | :---------- | :--------- | :--------- | :------------------------------- | :----------------------------- | :---------------------------- | :----------------------------- | :---------------------- | :---------------------------------------------------------------------------- | ---------------------------- | :------ |
+| **`$button-icon-ghost`** | Ghost   | Default        | xs sm md lg | True False | True False | **`$feedback-color-error-dark`** | **`$standard-color-white`**    | transparent                   | **`$neutral-color-extradark`** | **`$border-radius-sm`** | '----'                                                                        | '----'                       | embed   |
+| **`$button-icon-ghost`** | Ghost   | Hover          | xs sm md lg | True False | True False | **`$feedback-color-error-dark`** | **`$standard-color-white`**    | **`$neutral-color-lightest`** | **`$neutral-color-darkest`**   | \*\*`$border-radius-sm  | '----'                                                                        | '----'                       | embed   |
+| **`$button-icon-ghost`** | Ghost   | Active / Focus | xs sm md lg | True False | True False | **`$feedback-color-error-dark`** | **`$standard-color-white`**    | **`$neutral-color-lightest`** | **`$neutral-color-darkest`**   | **`$border-radius-sm`** | **`$border-width-thin`** **`$border-radius-sm`** **`$neutral-color-darkest`** | '----'                       | embed   |
+| **`$button-icon-ghost`** | Ghost   | Disabled       | xs sm md lg | True False | True False | **`$neutral-color-light`**       | **`$neutral-color-extradark`** | transparent                   | **`$neutral-color-extradark`** | **`$border-radius-sm`** | '----'                                                                        | **`$opacity-level-intense`** | embed   |
+
+<br />
+
+## Do
+
+1. Os **`buttons icon`** devem ser usados em situações onde os usuários precisam:
+2. Habilitar ações como abrir dropdowns, editar informações, etc.;
+3. Atalhos para acessar informações contidas em contextos externos ao qual está inserido;
+4. Use em casos onde a área de ação é bastante condensada, ou seja, inviável de se adicionar um botão primário com label.
+
+<br />
+
+## Dont't
+
+1. Confirmar uma alteração ou crIação realizada em um determinado contexto. Em vez disso, prefira **`Buttons`**.

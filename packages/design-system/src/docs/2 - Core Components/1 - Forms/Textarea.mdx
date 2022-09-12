@@ -1,0 +1,31 @@
+# **Textarea**
+
+O **Textarea** permite criar facilmente entradas de texto de várias linhas.
+
+<br />
+
+## Anatomy
+
+O Textarea é formado com base nos Global Tokens.
+
+| State          | Size     | Container (Fill color)           | Icon                      | Text                    | Text Color (Placeholder)       | Icon Erro Color                  | Border Radius           | Border (Weight / Stroke Color)                               | Opacity                     | Exemplo   |
+| :------------- | :------- | :------------------------------- | :------------------------ | :---------------------- | :----------------------------- | :------------------------------- | :---------------------- | :----------------------------------------------------------- | :-------------------------- | :-------- |
+| Default        | sm md lg | **`$standard-color-white`**      | None Left Icon Right Icon | **`$font-family-base`** | **`$neutral-color-dark`**      | '---'                            | **`$border-radius-sm`** | **`$border-width-hairline`** **`$neutral-color-mediumdark`** | '----'                      | _[embed]_ |
+| Hover          | sm md lg | **`$standard-color-white`**      | None Left Icon Right Icon | **`$font-family-base`** | **`$neutral-color-dark`**      | '---'                            | **`$border-radius-sm`** | **`$border-width-hairline`** **`$neutral-color-darkest`**    | '----'                      | _[embed]_ |
+| Active / Focus | sm md lg | **`$neutral-color-lightest`**    | None Left Icon Right Icon | **`$font-family-base`** | **`$neutral-color-darkest`**   | '----'                           | **`$border-radius-sm`** | **`$border-width-thin`** **`$brand-color-primary-default`**  | '----'                      | _[embed]_ |
+| Invalid        | sm md lg | **`$neutral-color-lightest`**    | None Left Icon Right Icon | **`$font-family-base`** | **`$neutral-color-darkest`**   | **`$feedback-color-error-dark`** | **`$border-radius-sm`** | **`$border-width-thin`** **`$feedback-color-error-dark`**    | '---'                       | _[embed]_ |
+| Disabled       | sm md lg | **`$neutral-color-mediumlight`** | None Left Icon Right Icon | **`$font-family-base`** | **`$neutral-color-extradark`** | '---'                            | **`$border-radius-sm`** | **`$border-width-hairline`** **`$neutral-color-extradark`**  | **`$opacity-level-medium`** | _[embed]_ |
+
+<br />
+
+## Do
+
+Os text areas devem ser usados em situações onde os usuários precisem:
+
+1. Fornecer longos inputs de texto.
+
+<br />
+
+## Dont't
+
+Os text areas não devem ser utilizados como campos de preenchimento para conteúdos curtos. Em vez disso, utilize input.

@@ -1,0 +1,17 @@
+# **Close Button**
+
+**Close Button** é essencialmente um botão com um ícone de fechar. Ele é usado para lidar com a funcionalidade de fechamento em componentes de feedback e sobreposição, como alerts, toasts, drawers e modals.
+
+<br />
+
+## Anatomy
+
+O **Close Button** é formada com base nos Global Tokens e se faz o uso do componente icon size para controle das dimensões dos ícones..
+
+| State    | Size     | Container (Fill color)          | Icon Color                   | Border Radius           | Outline (Weight / Border Radius / Stroke Color)                               | Opacity                     | Exemplo   |
+| :------- | :------- | :------------------------------ | :--------------------------- | :---------------------- | :---------------------------------------------------------------------------- | :-------------------------- | :-------- |
+| Default  | sm md lg | transparent                     | **`$neutral-color-darkest`** | **`$border-radius-sm`** | '---'                                                                         | '----'                      | _[embed]_ |
+| Hover    | sm md lg | **`$neutral-color-extralight`** | **`$neutral-color-darkest`** | **`$border-radius-sm`** | '---'                                                                         | '----'                      | _[embed]_ |
+| Focus    | sm md lg | **`$neutral-color-extralight`** | **`$neutral-color-darkest`** | **`$border-radius-sm`** | **`$border-width-thin`** **`$border-radius-sm`** **`$neutral-color-darkest`** | '----'                      | _[embed]_ |
+| Active   | sm md lg | **`$neutral-color-mediumdark`** | **`$neutral-color-darkest`** | **`$border-radius-sm`** | '---'                                                                         | '----'                      | _[embed]_ |
+| Disabled | sm md lg | transparent                     | **`$neutral-color-darkest`** | **`$border-radius-sm`** | '----'                                                                        | **`$opacity-level-medium`** | _[embed]_ |

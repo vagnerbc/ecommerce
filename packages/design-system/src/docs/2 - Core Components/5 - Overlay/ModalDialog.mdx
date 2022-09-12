@@ -1,0 +1,51 @@
+# **Modal Dialog**
+
+Uma caixa de diálogo é uma janela sobreposta na janela principal ou em outra janela de diálogo. O conteúdo por trás de um diálogo **modal** é inerte, o que significa que os usuários não podem interagir com ele.
+
+<br />
+
+## Anatomy
+
+O **Modal Dialog** é formado com base nos Global Tokens, e pode ser personalizado a critério do/da designer.
+
+| Variant                                                                                      | Side (Fill color)           | Border Radius           | Shadow Style                 | Exemplo   |
+| :------------------------------------------------------------------------------------------- | :-------------------------- | :---------------------- | :--------------------------- | :-------- |
+| Class: Default, Fill Addon: False, True Shadow, True, False Size. sm Button Columns: 1, 2, 3 | **`$standard-color-white`** | **`$border-radius-md`** | **`$shadow-primary-level1`** | _[embed]_ |
+
+<br />
+
+## Como utilizar o componente padrão?
+
+1. Insira o modal no cavas ou frame que desejar.
+2. Clique no modal, na layer “**Modal Container**” expanda a layer para visualizar a layer “**Troque aqui**”.
+3. Agora com o componente selecionado, utilize a barra de propriedades para altera o componente, pode utilizar o componente padrão “**Modal Container**” ou trocar para outro componente.
+
+<br />
+
+## Como personalizar o componente?
+
+1. Insira o modal no cavas ou frame que desejar.
+2. Aplique o “**Detach instance**” no componente para manter a estrutura padrão, não altere os componentes “**Modal Header**” e “**Modal Footer**”
+3. O novo conteúdo deve ser inserido dentro da layer “**Modal Container**” pode ser feita a remoção do componente padrão “**Troque aqui**”
+   Caso precise altere o “**Resizing**” da layer “**Modal Container**”
+
+<br />
+
+## Do
+
+Os modals devem ser usados em situações onde os usuários possam:
+
+1. Realizar uma tarefa de adição, edição ou consulta pontual em curto prazo de tempo;
+2. Obter um suporte à conclusão de tarefas sem perder o contexto da página tela principal.
+
+<br />
+
+## Dont't
+
+Os modals não devem ser utilizados como caixas de avisos. Em vez disso, utilize dialog ou snackbar.
+
+O modal é um componente muito versátil, mas isso não significa que são adequados para todos os fins. Portanto:
+
+1. Evite utilizá-los para uma sequência grande de interações, como em wizards ou situações nas quais o usuário precise acessar mais que três sessões diferentes;
+2. Evite em situações nas quais o usuário precise tomar decisões complexas que requeiram fontes adicionais de informação externas ao modal;
+3. Não utilizá-los em situações em que o usuário precise interagir com o conteúdo da página a qual disparou sua abertura.

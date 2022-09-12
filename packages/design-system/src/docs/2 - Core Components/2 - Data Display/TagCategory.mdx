@@ -1,0 +1,51 @@
+# **Tag Category**
+
+**Tag Category** serve para categorizar um determinado conteúdo, deixando claro que ela pertence a um entre vários tipos.
+
+<br />
+
+## Anatomy
+
+A **Tag Category** é formada com base nos Global Tokens.
+
+<br />
+
+### Tag Category - Estilo Ghost
+
+| Variant | State    | Size     | Container (Fill color) | Icon                      | Icon Color                     | Text                    | Text Weight             | Text Color                     | Opacity                      | Exemplo   |
+| :------ | :------- | :------- | :--------------------- | :------------------------ | :----------------------------- | :---------------------- | :---------------------- | :----------------------------- | :--------------------------- | :-------- |
+| Ghost   | Default  | sm md lg | transparent            | None Left Icon Right Icon | **`$neutral-color-extradark`** | **`$font-family-base`** | **`$font-weight-bold`** | **`$neutral-color-extradark`** | '----'                       | _[embed]_ |
+| Ghost   | Disabled | sm md lg | transparent            | None Left Icon Right Icon | **`$neutral-color-extradark`** | **`$font-family-base`** | **`$font-weight-bold`** | **`$neutral-color-extradark`** | **`$opacity-level-intense`** | _[embed]_ |
+
+<br />
+
+### Tag Category - Estilo Outline
+
+| Variant | State    | Size     | Container (Fill color)           | Icon                      | Icon Color                      | Text                    | Text Weight             | Text Color                      | Border Radius             | Border (Weight / Stroke Color)                                | Opacity                      | Exemplo   |
+| :------ | :------- | :------- | :------------------------------- | :------------------------ | :------------------------------ | :---------------------- | :---------------------- | :------------------------------ | :------------------------ | :------------------------------------------------------------ | :--------------------------- | :-------- |
+| Outline | Default  | sm md lg | transparent                      | None Left Icon Right Icon | **`$neutral-color-mediumdark`** | **`$font-family-base`** | **`$font-weight-bold`** | **`$neutral-color-mediumdark`** | **`$border-radius-pill`** | **`$border-width-hairline`** **`$neutral-color-mediumdark`**  | '----'                       | _[embed]_ |
+| Outline | Disabled | sm md lg | **`$neutral-color-mediumlight`** | None Left Icon Right Icon | **`$neutral-color-mediumdark`** | **`$font-family-base`** | **`$font-weight-bold`** | **`$neutral-color-extradark`**  | **`$border-radius-pill`** | **`$border-width-hairline`** **`$neutral-color-mediumlight`** | **`$opacity-level-intense`** | _[embed]_ |
+
+<br />
+
+### Tag Category - Estilo Highlight
+
+| Variant   | State    | Size     | Container (Fill color)             | Icon                      | Icon Color                      | Text                    | Text Weight             | Text Color                     | Border Radius             | Opacity                      | Exemplo   |
+| :-------- | :------- | :------- | :--------------------------------- | :------------------------ | :------------------------------ | :---------------------- | :---------------------- | :----------------------------- | :------------------------ | :--------------------------- | :-------- |
+| Highlight | Default  | sm md lg | **`$brand-color-secondary-light`** | None Left Icon Right Icon | **`$standard-color-white`**     | **`$font-family-base`** | **`$font-weight-bold`** | **`$standard-color-white`**    | **`$border-radius-pill`** | '----'                       | _[embed]_ |
+| Highlight | Disabled | sm md lg | **`$neutral-color-mediumlight`**   | None Left Icon Right Icon | **`$neutral-color-mediumdark`** | **`$font-family-base`** | **`$font-weight-bold`** | **`$neutral-color-extradark`** | **`$border-radius-pill`** | **`$opacity-level-intense`** | _[embed]_ |
+
+<br />
+
+## Do
+
+As tag category devem ser usados em situações onde seja necessário:
+
+1. Indicar qual é a seleção realizada dentro de um filtro;
+2. Indicar qual ou quais seleções foram realizadas dentro de uma lista de opções.
+
+<br />
+
+## Dont't
+
+Quando for preciso uso de ações clicáveis, para isso use o componente tag select.

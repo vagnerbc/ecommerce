@@ -1,0 +1,30 @@
+# **Links**
+
+**Links** são elementos acessíveis usados ​​principalmente para navegação. Esse componente é estilizado para se assemelhar a um hiperlink e renderiza semanticamente um **`<a>`**.
+
+<br />
+
+## Anatomy
+
+Os **links** são formados com base nos Global Tokens.
+
+| Variant | Token       | Size        | Container (Fill color) | Icon                      | Text label              | Text label Color                | Text Decoration | Icon Color                      | Border Radius             | Outline (Weight / Border Radius / Stroke Color)                               | Opacity                      | Exemplo   |
+| :------ | :---------- | :---------- | :--------------------- | :------------------------ | :---------------------- | :------------------------------ | :-------------- | :------------------------------ | :------------------------ | :---------------------------------------------------------------------------- | :--------------------------- | :-------- |
+| Link    | $link       | xs sm md lg | transparent            | None Left Icon Right Icon | **`$font-family-base`** | **`$neutral-color-extradark`**  | none            | **`$neutral-color-extradark`**  | **`$border-radius-none`** | '----'                                                                        | '----'                       | _[embed]_ |
+| Link    | **`$link`** | xs sm md lg | transparent            | None Left Icon Right Icon | **`$font-family-base`** | **`$neutral-color-mediumdark`** | underline       | **`$neutral-color-mediumdark`** | \*\*`$border-radius-none  | '----'                                                                        | '----'                       | _[embed]_ |
+| Link    | **`$link`** | xs sm md lg | transparent            | None Left Icon Right Icon | **`$font-family-base`** | **`$neutral-color-darkest`**    | underline       | **`$neutral-color-darkest`**    | **`$border-radius-none`** | **`$border-width-thin`** **`$border-radius-sm`** **`$neutral-color-darkest`** | '----'                       | _[embed]_ |
+| Link    | **`$link`** | xs sm md lg | transparent            | None Left Icon Right Icon | **`$font-family-base`** | **`$neutral-color-extradark`**  | none            | **`$neutral-color-extradark`**  | **`$border-radius-none`** | '----'                                                                        | **`$opacity-level-intense`** | _[embed]_ |
+
+<br />
+
+## Do
+
+Podem aparecer no fim de um bloco de texto;
+Podem ser aplicados em contextos onde existe uma ação de menor peso;
+Aplicamos os links também em rodapés ou para indicar termos de uso;
+
+<br />
+
+## Dont't
+
+Não devem ser usados para destacar uma ação importante como “Adicionar”, “Fechar”, “Cancelar” ou “Salvar”, nesse contexto utiliza-se o componente button;

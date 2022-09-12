@@ -1,0 +1,31 @@
+# **Tag Select**
+
+**Tag Select** serve para selecionar uma categoria de conteúdo, deixando claro que ela pertence a um entre vários tipos.
+
+<br />
+
+## Anatomy
+
+A **Tag Select** é formada com base nos Global Tokens, e faz uso do componente close button.
+
+| State    | Size     | Container (Fill color)              | Icon                      | Icon Color                   | Text                    | Text Weight             | Text Color                      | Border Radius             | Border (Weight / Stroke Color)                                   | Opacity                      | Exemplo   |
+| :------- | :------- | :---------------------------------- | :------------------------ | :--------------------------- | :---------------------- | :---------------------- | :------------------------------ | :------------------------ | :--------------------------------------------------------------- | :--------------------------- | :-------- |
+| Default  | sm md lg | transparent                         | None Left Icon Right Icon | '---'                        | **`$font-family-base`** | **`$font-weight-bold`** | **`$neutral-color-mediumdark`** | **`$border-radius-pill`** | **`$border-width-hairline`** **`$neutral-color-mediumdark`**     | '----'                       | _[embed]_ |
+| Hover    | sm md lg | **`$brand-color-primary-light`**    | None Left Icon Right Icon | '---'                        | **`$font-family-base`** | **`$font-weight-bold`** | **`$standard-color-white`**     | **`$border-radius-pill`** | **`$border-width-hairline`** **`$brand-color-primary-light`**    | '----'                       | _[embed]_ |
+| Active   | sm md lg | **`$brand-color-primary-lightest`** | None Left Icon Right Icon | **`$neutral-color-darkest`** | **`$font-family-base`** | **`$font-weight-bold`** | **`$neutral-color-darkest`**    | **`$border-radius-pill`** | **`$border-width-hairline`** **`$brand-color-primary-lightest`** | '----'                       | _[embed]_ |
+| Disabled | sm md lg | **`$neutral-color-mediumlight`**    | None Left Icon Right Icon | '----'                       | **`$font-family-base`** | **`$font-weight-bold`** | **`$neutral-color-extradark`**  | **`$border-radius-pill`** | **`$border-width-hairline`** **`$neutral-color-mediumlight`**    | **`$opacity-level-intense`** | _[embed]_ |
+
+<br />
+
+## Do
+
+A tag select devem ser usados em situações onde seja necessário:
+
+1. Indicar qual é a seleção realizada dentro de um filtro;
+2. Quando a pessoa usuário precisar executar alguma ação de click.
+
+<br />
+
+## Dont't
+
+Quando não for preciso uso de ações clicáveis, para isso use o componente tag category.

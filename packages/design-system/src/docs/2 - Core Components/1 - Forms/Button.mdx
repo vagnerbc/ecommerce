@@ -1,0 +1,85 @@
+# **Button**
+
+São elementos clicáveis ​​usados ​​para **executar uma ação importante em páginas, modais e formulários.** Devem conter um _label_ curto que descreva a ação que ocorrerá quando o usuário clicar nele.
+
+<br />
+
+## Hierarchy
+
+| **[Link](?path=/story/core-components-button--button&args=variant:brand-primary-solid)** | **[Link](?path=/story/core-components-button--button&args=variant:neutral-extradark-ghost)** | **[Link](?path=/story/core-components-button--button&args=variant:ghost)** | **[Link](?path=/story/core-components-button--button&args=variant:neutral-extralight-solid)** |
+| ---------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------- |
+| Primary (Solid)                                                                          | Neutral Extradark (Ghost)                                                                    | Ghost                                                                      | Neutral Extralight (Solid)                                                                    |
+
+<br />
+
+## Anatomy
+
+O Button é formado com base nos Global Tokens.
+
+<br />
+
+### Button Primary
+
+| Class          | Token                 | Variant | State          | Size        | Container (Fill color)              | Icon                      | Text label              | Text label Color               | Icon Color                     | Border Radius           | Border (Weight / Stroke Color) | Outline (Weight / Border Radius / Stroke Color)                         | Opacity                      | Exemplo   |
+| :------------- | :-------------------- | :------ | :------------- | :---------- | :---------------------------------- | :------------------------ | :---------------------- | :----------------------------- | :----------------------------- | :---------------------- | :----------------------------- | :---------------------------------------------------------------------- | :--------------------------- | :-------- |
+| Button Primary | **`$button-primary`** | Solid   | Default        | xs sm md lg | **`$brand-color-primary-default`**  | None Left Icon Right Icon | **`$font-family-base`** | **`$standard-color-white`**    | **`$standard-color-white`**    | **`$border-radius-sm`** | **`$border-radius-none`**      | '----'                                                                  | '----'                       | _[embed]_ |
+| Button Primary | **`$button-primary`** | Solid   | Hover          | xs sm md lg | **`$brand-color-primary-light`**    | None Left Icon Right Icon | **`$font-family-base`** | **`$standard-color-white`**    | **`$standard-color-white`**    | **`$border-radius-sm`** | **`$border-radius-none`**      | '----'                                                                  | '----'                       | _[embed]_ |
+| Button Primary | **`$button-primary`** | Solid   | Active / Focus | xs sm md lg | **`$brand-color-primary-lightest`** | None Left Icon Right Icon | **`$font-family-base`** | **`$neutral-color-darkest`**   | **`$neutral-color-darkest`**   | **`$border-radius-sm`** | **`$border-radius-none`**      | **`$border-width-thin $border-radius-sm`** **`$neutral-color-darkest`** | '----'                       | \*[embed  |
+| Button Primary | **`$button-primary`** | Solid   | Disabled       | xs sm md lg | **`$neutral-color-mediumlight`**    | None Left Icon Right Icon | **`$font-family-base`** | **`$neutral-color-extradark`** | **`$neutral-color-extradark`** | **`$border-radius-sm`** | **`$border-radius-none`**      | '----'                                                                  | **`$opacity-level-intense`** | _[embed]_ |
+
+<br />
+
+### Button Ghost
+
+| Class           | Token                  | Variant | State          | Size        | Container (Fill color)              | Icon                      | Text label              | Text label Color               | Icon Color                     | Border Radius           | Border (Weight / Stroke Color)                                   | Outline (Weight / Border Radius / Stroke Color)                               | Opacity                      | Exemplo   |
+| :-------------- | :--------------------- | :------ | :------------- | :---------- | :---------------------------------- | :------------------------ | :---------------------- | :----------------------------- | :----------------------------- | :---------------------- | :--------------------------------------------------------------- | :---------------------------------------------------------------------------- | :--------------------------- | :-------- |
+| Button Tertiary | **`$button-tertiary`** | Outline | Default        | xs sm md lg | transparent                         | None Left Icon Right Icon | **`$font-family-base`** | **`$neutral-color-extradark`** | **`$neutral-color-extradark`** | **`$border-radius-sm`** | **`$border-width-hairline`** **`$neutral-color-mediumdark`**     | '----'                                                                        | '----'                       | _[embed]_ |
+| Button Tertiary | **`$button-tertiary`** | Outline | Hover          | xs sm md lg | **`$brand-color-primary-light`**    | None Left Icon Right Icon | **`$font-family-base`** | **`$standard-color-white`**    | **`$standard-color-white`**    | **`$border-radius-sm`** | **`$border-width-hairline`** **`$brand-color-primary-light`**    | '----'                                                                        | '----'                       | _[embed]_ |
+| Button Tertiary | **`$button-tertiary`** | Outline | Active / Focus | xs sm md lg | **`$brand-color-primary-lightest`** | None Left Icon Right Icon | **`$font-family-base`** | **`$neutral-color-darkest`**   | **`$neutral-color-darkest`**   | **`$border-radius-sm`** | **`$border-width-hairline`** **`$brand-color-primary-lightest`** | **`$border-width-thin`** **`$border-radius-sm`** **`$neutral-color-darkest`** | '----'                       | _[embed]_ |
+| Button Tertiary | **`$button-tertiary`** | Outline | Disabled       | xs sm md lg | **`$neutral-color-mediumlight`**    | None Left Icon Right Icon | **`$font-family-base`** | **`$neutral-color-extradark`** | **`$neutral-color-extradark`** | **`$border-radius-sm`** | **`$border-width-hairline`** **`$neutral-color-mediumdark`**     | '----'                                                                        | **`$opacity-level-intense`** | _[embed]_ |
+
+<br />
+
+### Button Ghost
+
+| Class        | Token               | Variant | State          | Size        | Container (Fill color)        | Icon                      | Text label              | Text label Color               | Icon Color                     | Border Radius           | Border Width             | Outline (Weight / Border Radius / Stroke Color)                               | Opacity                      | Exemplo   |
+| :----------- | :------------------ | :------ | :------------- | :---------- | :---------------------------- | :------------------------ | ----------------------- | :----------------------------- | :----------------------------- | :---------------------- | :----------------------- | :---------------------------------------------------------------------------- | :--------------------------- | :-------- |
+| Button Ghost | **`$button-ghost`** | Ghost   | Default        | xs sm md lg | transparent                   | None Left Icon Right Icon | **`$font-family-base`** | **`$neutral-color-extradark`** | **`$neutral-color-extradark`** | **`$border-radius-sm`** | **`$border-width-none`** | '----'                                                                        | '----'                       | _[embed]_ |
+| Button Ghost | **`$button-ghost`** | Ghost   | Hover          | xs sm md lg | **`$neutral-color-lightest`** | None Left Icon Right Icon | **`$font-family-base`** | **`$neutral-color-darkest`**   | **`$neutral-color-darkest`**   | **`$border-radius-sm`** | **`$border-width-none`** | '----'                                                                        | '----'                       | _[embed]_ |
+| Button Ghost | **`$button-ghost`** | Ghost   | Active / Focus | xs sm md lg | **`$neutral-color-lightest`** | None Left Icon Right Icon | **`$font-family-base`** | **`$neutral-color-darkest`**   | **`$neutral-color-darkest`**   | **`$border-radius-sm`** | **`$border-width-none`** | **`$border-width-thin`** **`$border-radius-sm`** **`$neutral-color-darkest`** | '----'                       | _[embed]_ |
+| Button Ghost | **`$button-ghost`** | Ghost   | Disabled       | xs sm md lg | transparent                   | None Left Icon Right Icon | **`$font-family-base`** | **`$neutral-color-extradark`** | **`$neutral-color-extradark`** | **`$border-radius-sm`** | **`$border-width-none`** | '----'                                                                        | **`$opacity-level-intense`** | _[embed]_ |
+
+<br />
+
+### Button Link
+
+| Class       | Token              | Variant   | State          | Size        | Container (Fill color) | Icon                      | Text label              | Text label Color                | Text Decoration | Icon Color                      | Border Radius             | Outline (Weight / Border Radius / Stroke Color)                               | Opacity                      | Explore   |
+| :---------- | :----------------- | :-------- | :------------- | :---------- | :--------------------- | :------------------------ | :---------------------- | :------------------------------ | :-------------- | :------------------------------ | :------------------------ | ----------------------------------------------------------------------------- | :--------------------------- | :-------- |
+| Button Link | **`$button-link`** | Link      | Default        | xs sm md lg | transparent            | None Left Icon Right Icon | **`$font-family-base`** | **`$neutral-color-extradark`**  | none            | **`$neutral-color-extradark`**  | **`$border-radius-none`** | '----'                                                                        | '----'                       | _[embed]_ |
+| Button Link | **`$button-link`** | Link`\*\* | Hover          | xs sm md lg | transparent            | None Left Icon Right Icon | **`$font-family-base`** | **`$neutral-color-mediumdark`** | underline       | **`$neutral-color-mediumdark`** | **`$border-radius-none`** | '----'                                                                        | '----'                       | _[embed]_ |
+| Button Link | **`$button-link`** | Link      | Active / Focus | xs sm md lg | transparent            | None Left Icon Right Icon | **`$font-family-base`** | **`$neutral-color-darkest`**    | underline       | **`$neutral-color-darkest`**    | **`$border-radius-none`** | **`$border-width-thin`** **`$border-radius-sm`** **`$neutral-color-darkest`** | '----'                       | _[embed]_ |
+| Button Link | **`$button-link`** | Link      | Disabled       | xs sm md lg | transparent            | None Left Icon Right Icon | **`$font-family-base`** | **`$neutral-color-extradark`**  | none            | **`$neutral-color-extradark`**  | **`$border-radius-none`** | '----'                                                                        | **`$opacity-level-intense`** | _[embed]_ |
+
+<br />
+
+## Do
+
+Os buttons devem ser usados em situações onde os usuários precisam:
+
+1.  Confirmar uma alteração realizada em um contexto específico;
+2.  Confirmar a criação de uma nova tarefa ou registro;
+3.  Navegar entre etapas de um processo.
+
+<br />
+
+## Dont't
+
+Os buttons não devem ser utilizados como elementos de navegação entre jornadas/fluxos. Em vez disso, utilize tabs, breadcrumbs, etc.
+
+<br />
+
+## Labels
+
+1.  O label nunca terá quebra de linha.
+2.  O label em botões sempre terá o primeiro caractere em letra maiúscula e os demais caracteres em letra minúscula.
+3.  Não utilize maiúscula em todas as palavras ou letras.

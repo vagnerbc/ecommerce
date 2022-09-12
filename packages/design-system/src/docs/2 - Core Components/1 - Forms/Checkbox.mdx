@@ -1,0 +1,35 @@
+# **Checkbox**
+
+São elementos que possuem uma caixa de seleção que permite ao usuário selecionar ou desmarcar a seleção uma ou mais opções.
+
+<br />
+
+## Anatomy
+
+O Checkbox é formado com base nos Global Tokens.
+
+| State              | Size     | Label      | Text label              | Text label Color               | Text Weight                | Container (Fill color)             | Stroke Color / Weight                                     | Outline (Weight / Border Radius / Stroke Color)                               | Icon Color                     | Border Radius           | Opacity                     | Exemplo   |
+| :----------------- | :------- | :--------- | :---------------------- | :----------------------------- | :------------------------- | :--------------------------------- | :-------------------------------------------------------- | :---------------------------------------------------------------------------- | :----------------------------- | :---------------------- | :-------------------------- | :-------- |
+| Default            | sm md lg | True False | **`$font-family-base`** | **`$neutral-color-extradark`** | **`$font-weight-regular`** | **`$standard-color-white`**        | **`$neutral-color-mediumdark`** **`$border-width-thin`**  | '---'                                                                         | '---'                          | **`$border-radius-xs`** | '---'                       | _[embed]_ |
+| Focus              | sm md lg | True False | **`$font-family-base`** | **`$neutral-color-extradark`** | **`$font-weight-regular`** | **`$standard-color-white`**        | **`$neutral-color-mediumdark`** **`$border-width-thin`**  | **`$border-width-thin`** **`$border-radius-sm`** **`$neutral-color-darkest`** | '---'                          | **`$border-radius-xs`** | '---'                       | _[embed]_ |
+| Invalid            | sm md lg | True False | **`$font-family-base`** | **`$neutral-color-extradark`** | **`$font-weight-regular`** | **`$standard-color-white`**        | **`$feedback-color-error-dark`** **`$border-width-thin`** | '---'                                                                         | '---'                          | **`$border-radius-xs`** | '---'                       | _[embed]_ |
+| Disabled           | sm md lg | True False | **`$font-family-base`** | **`$neutral-color-extradark`** | **`$font-weight-regular`** | **`$neutral-color-mediumlight`**   | **`$neutral-color-extradark`** **`$border-width-thin`**   | '---'                                                                         | '---'                          | **`$border-radius-xs`** | **`$opacity-level-medium`** | _[embed]_ |
+| isChecked          | sm md lg | True False | **`$font-family-base`** | **`$neutral-color-extradark`** | **`$font-weight-bold`**    | **`$brand-color-primary-default`** | '---'                                                     | '---'                                                                         | **`$standard-color-white`**    | **`$border-radius-xs`** | '---'                       | _[embed]_ |
+| isChecked Focus    | sm md lg | True False | **`$font-family-base`** | **`$neutral-color-extradark`** | **`$font-weight-bold`**    | **`$brand-color-primary-default`** | '---'                                                     | **`$border-width-thin`** **`$border-radius-sm`** **`$neutral-color-darkest`** | **`$standard-color-white`**    | **`$border-radius-xs`** | '---'                       | _[embed]_ |
+| isChecked Hover    | sm md lg | True False | **`$font-family-base`** | **`$neutral-color-extradark`** | **`$font-weight-bold `**   | **`$brand-color-primary-light`**   | '---'                                                     | '---'                                                                         | **`$standard-color-white`**    | **`$border-radius-xs`** | '---'                       | _[embed]_ |
+| isChecked Disabled | sm md lg | True False | **`$font-family-base`** | **`$neutral-color-extradark`** | **`$font-weight-bold`**    | **`$neutral-color-mediumlight`**   | '---'                                                     | '---'                                                                         | **`$neutral-color-extradark`** | **`$border-radius-xs`** | **`$opacity-level-medium`** | _[embed]_ |
+
+<br />
+
+## Do
+
+1.  Use as caixas de seleção quando as pessoas usuárias devem selecionar uma ou mais opções de uma lista de itens relacionados;
+2.  Pode ser usado para filtrar dados em uma página, em um menu ou em um componente e em uma ação explícita na qual é necessária para aplicar as configurações;
+3.  Podem ser utilizados em alguns componentes como: Modais, Formulários, Tabelas, Termos e Condições.
+4.  Em uma lista com várias seleções, opte por usar checkboxes. Elas indicam item selecionais ocupando menos espaço.
+
+<br />
+
+## Dont't
+
+1.  Não use checkboxes quando a resposta for apenas uma opção entre duas possíveis. Neste caso, é recomendado o Radio Button.

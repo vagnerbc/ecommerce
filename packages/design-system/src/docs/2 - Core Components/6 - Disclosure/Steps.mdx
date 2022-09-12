@@ -1,0 +1,45 @@
+# **Steps**
+
+**Step** tem como objetivo mostrar para a pessoa usuária a quantidade de etapas dentro de um fluxo, bem como indicar qual etapa está sendo apresentada.
+
+<br />
+
+## Anatomy
+
+Os **Steps** é formado com base nos Global Tokens.
+
+<br />
+
+### Numbered Steps
+
+| Class          | State     | Side (Fill color)                       | Text                    | Text Weight             | Text Color                  | Icon Color                  | Border (Weight / Stroke Color)                              | Exemplo   |
+| :------------- | :-------- | :-------------------------------------- | :---------------------- | :---------------------- | :-------------------------- | :-------------------------- | :---------------------------------------------------------- | :-------- |
+| Numbered Steps | Active    | **`$brand-color-primary-default`**      | **`$font-family-base`** | **`$font-weight-bold`** | **`$standard-color-white`** | **`$standard-color-white`** | **`$border-width-none`**                                    | _[embed]_ |
+| Numbered Steps | Inactive  | **`$standard-color-white`**             | **`$font-family-base`** | **`$font-weight-bold`** | **`$neutral-color-dark`**   | **`$neutral-color-dark`**   | **`$border-width-thin`** **`$brand-color-primary-default`** | _[embed]_ |
+| Numbered Steps | Completed | **`$feedback-color-success-extradark`** | **`$font-family-base`** | **`$font-weight-bold`** | **`$standard-color-white`** | **`$standard-color-white`** | **`$border-width-none`**                                    | _[embed]_ |
+
+<br />
+
+### Step with Arrow
+
+| Class           | State   | Side (Fill color)                  | Text                    | Text Weight             | Text Color                   | Border (Weight / Stroke Color)                               | Exemplo   |
+| :-------------- | :------ | :--------------------------------- | :---------------------- | :---------------------- | :--------------------------- | :----------------------------------------------------------- | :-------- |
+| Step with Arrow | Default | **`$standard-color-white`**        | **`$font-family-base`** | **`$font-weight-bold`** | **`$neutral-color-darkest`** | **`$border-width-hairline`** **`$neutral-color-mediumdark`** | _[embed]_ |
+| Step with Arrow | Hover   | **`$neutral-color-extralight`**    | **`$font-family-base`** | **`$font-weight-bold`** | **`$neutral-color-darkest`** | **`$border-width-hairline`** **`$neutral-color-mediumdark`** | _[embed]_ |
+| Step with Arrow | Active  | **`$brand-color-primary-default`** | **`$font-family-base`** | **`$font-weight-bold`** | **`$standard-color-white`**  | **`$border-width-none`**                                     | _[embed]_ |
+
+<br />
+
+### Vertical Step
+
+| Class         | State     | Side (Fill color)                       | Text                    | Text Weight             | Text Color                  | Icon Color                  | Border (Weight / Stroke Color)                              | Exemplo   |
+| :------------ | :-------- | :-------------------------------------- | :---------------------- | :---------------------- | :-------------------------- | :-------------------------- | :---------------------------------------------------------- | :-------- |
+| Vertical Step | Active    | **`$brand-color-primary-default`**      | **`$font-family-base`** | **`$font-weight-bold`** | **`$standard-color-white`** | **`$standard-color-white`** | **`$border-width-none`**                                    | _[embed]_ |
+| Vertical Step | Inactive  | **`$standard-color-white`**             | **`$font-family-base`** | **`$font-weight-bold`** | **`$neutral-color-dark`**   | **`$neutral-color-dark`**   | **`$border-width-thin`** **`$brand-color-primary-default`** | _[embed]_ |
+| Vertical Step | Completed | **`$feedback-color-success-extradark`** | **`$font-family-base`** | **`$font-weight-bold`** | **`$standard-color-white`** | **`$standard-color-white`** | **`$border-width-none`**                                    | _[embed]_ |
+
+<br />
+
+## Do
+
+Quando a jornada for baseada em uma árvore de decisão com quantidade.

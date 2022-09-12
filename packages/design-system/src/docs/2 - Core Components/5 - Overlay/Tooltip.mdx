@@ -1,0 +1,31 @@
+# **Tooltip**
+
+Um **tooltip** é uma mensagem breve e informativa que aparece quando um usuário interage com um elemento. As dicas de ferramentas geralmente são iniciadas de duas maneiras: por meio de um gesto de mover o mouse ou por meio de um tab do teclado.
+
+<br />
+
+## Anatomy
+
+O **tooltip** é formado com base nos Global Tokens.
+
+| Class   | Side                  | Side (Fill color)             | Placement                    | Placement (Fill color)             | Text                    | Text Weight                | Text Color                   | Border (Weight / Stroke Color)                              | Shadow Style                 | Exemplo   |
+| :------ | :-------------------- | :---------------------------- | :--------------------------- | :--------------------------------- | :---------------------- | :------------------------- | :--------------------------- | :---------------------------------------------------------- | :--------------------------- | :-------- |
+| Default | Top Left Right Bottom | **`$neutral-color-darkest`**  | Top Bottom Left Right Center | **`$neutral-color-darkest`**       | **`$font-family-base`** | **`$font-weight-regular`** | **`$standard-color-white`**  | **`$border-width-none`**                                    | none                         | _[embed]_ |
+| Primary | Top Left Right Bottom | **`$neutral-color-lightest`** | Top Bottom Left Right Center | **`$brand-color-primary-default`** | **`$font-family-base`** | **`$font-weight-regular`** | **`$neutral-color-darkest`** | **`$border-width-thin`** **`$brand-color-primary-default`** | **`$shadow-primary-level1`** | _[embed]_ |
+
+<br />
+
+## Do
+
+Os tooltips devem ser usados em situações onde os usuários precisem:
+
+1. Entender o significado ou propósito de ícones;
+2. Acessar uma informação complementar;
+3. Ser orientados a realizar alguma ação (ajuda contextual);
+4. Receber alguma dica de uso (para uma nova funcionalidade, por exemplo).
+
+<br />
+
+## Dont't
+
+Os tooltips não devem ser utilizados para grandes informações. Em vez disso, prefira o alert dialog.

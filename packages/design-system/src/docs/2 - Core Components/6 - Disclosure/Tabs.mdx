@@ -1,0 +1,95 @@
+# **Tabs**
+
+Um componente de **tabs** acessíveis que fornece interações de teclado e atributos ARIA descritos no padrão de design de guias WAI-ARIA.
+
+<br />
+
+## Anatomy
+
+As **tabs** é formada com base nos Global Tokens.
+
+<br />
+
+### Sem ícone - Estilo Line
+
+| Variant | State    | Container (Fill color) | Text                    | Text Weight                | Text Color                         | Border-bottom (Weight / Stroke Color)                       | Outline (Weight / Border Radius / Stroke Color)                               | Opacity                      | Exemplo   |
+| :------ | :------- | :--------------------- | :---------------------- | :------------------------- | :--------------------------------- | :---------------------------------------------------------- | :---------------------------------------------------------------------------- | :--------------------------- | :-------- |
+| Line    | Default  | transparent            | **`$font-family-base`** | **`$font-weight-regular`** | **`$brand-color-primary-default`** | **`$border-width-thin`** transparent                        | '----'                                                                        | '----'                       | _[embed]_ |
+| Line    | Active   | transparent            | **`$font-family-base`** | **`$font-weight-regular`** | **`$brand-color-primary-default`** | **`$border-width-thin`** **`$brand-color-primary-default`** | '----'                                                                        | '---'                        | _[embed]_ |
+| Line    | Hover    | transparent            | **`$font-family-base`** | **`$font-weight-regular`** | **`$neutral-color-extradark`**     | **`$border-width-thin`** **`$brand-color-primary-default`** | '---'                                                                         | '---'                        | _[embed]_ |
+| Line    | Focus    | transparent            | **`$font-family-base`** | **`$font-weight-regular`** | **`$neutral-color-extradark`**     | **`$border-width-thin`** **`$brand-color-primary-default`** | **`$border-width-thin`** **`$border-radius-sm`** **`$neutral-color-darkest`** | '----'                       | _[embed]_ |
+| Line    | Disabled | transparent            | **`$font-family-base`** | **`$font-weight-regular`** | **`$neutral-color-dark`**          | **`$border-width-thin`** transparent                        | '---'                                                                         | **`$opacity-level-intense`** | _[embed]_ |
+
+<br />
+
+### Com ícone - Estilo Line
+
+| Variant | State    | Container (Fill color) | Text                    | Text Weight                | Text Color                         | Icon Color                         | Border-bottom (Weight / Stroke Color)                       | Outline (Weight / Border Radius / Stroke Color)                               | Opacity                      | Exemplo   |
+| :------ | :------- | :--------------------- | :---------------------- | :------------------------- | :--------------------------------- | :--------------------------------- | :---------------------------------------------------------- | :---------------------------------------------------------------------------- | :--------------------------- | :-------- |
+| Line    | Default  | transparent            | **`$font-family-base`** | **`$font-weight-regular`** | **`$brand-color-primary-default`** | **`$brand-color-primary-default`** | **`$border-width-thin`** transparent                        | '----'                                                                        | '----'                       | _[embed]_ |
+| Line    | Active   | transparent            | **`$font-family-base`** | **`$font-weight-regular`** | **`$brand-color-primary-default`** | **`$brand-color-primary-default`** | **`$border-width-thin`** **`$brand-color-primary-default`** | '----'                                                                        | '---'                        | _[embed]_ |
+| Line    | Hover    | transparent            | **`$font-family-base`** | **`$font-weight-regular`** | **`$neutral-color-extradark`**     | **`$neutral-color-extradark`**     | **`$border-width-thin`** **`$brand-color-primary-default`** | '---'                                                                         | '---'                        | _[embed]_ |
+| Line    | Focus    | transparent            | **`$font-family-base`** | **`$font-weight-regular`** | **`$neutral-color-extradark`**     | **`$neutral-color-extradark`**     | **`$border-width-thin`** **`$brand-color-primary-default`** | **`$border-width-thin`** **`$border-radius-sm`** **`$neutral-color-darkest`** | '----'                       | _[embed]_ |
+| Line    | Disabled | transparent            | **`$font-family-base`** | **`$font-weight-regular`** | **`$neutral-color-dark`**          | **`$neutral-color-dark`**          | **`$border-width-thin`** transparent                        | '---'                                                                         | **`$opacity-level-intense`** | _[embed]_ |
+
+<br />
+
+### Sem ícone - Estilo Soft-rounded
+
+| Variant      | State    | Container (Fill color)             | Text                    | Text Weight             | Text Color                     | Icon Color                     | Border Radius           | Outline (Weight / Border Radius / Stroke Color)                                 | Opacity                      | Exemplo   |
+| :----------- | :------- | :--------------------------------- | :---------------------- | :---------------------- | :----------------------------- | :----------------------------- | :---------------------- | :------------------------------------------------------------------------------ | :--------------------------- | :-------- |
+| Soft-rounded | Default  | transparent                        | **`$font-family-base`** | **`$font-weight-bold`** | **`$neutral-color-extradark`** | **`$neutral-color-extradark`** | **`$border-radius-sm`** | '----'                                                                          | '----'                       | _[embed]_ |
+| Soft-rounded | Active   | **`$brand-color-primary-default`** | **`$font-family-base`** | **`$font-weight-bold`** | **`$standard-color-white`**    | **`$standard-color-white`**    | **`$border-radius-sm`** | '----'                                                                          | '---'                        | _[embed]_ |
+| Soft-rounded | Hover    | **`$brand-color-primary-default`** | **`$font-family-base`** | **`$font-weight-bold`** | **`$standard-color-white`**    | **`$standard-color-white`**    | **`$border-radius-sm`** | '---'                                                                           | '---'                        | _[embed]_ |
+| Soft-rounded | Focus    | **`$brand-color-primary-default`** | **`$font-family-base`** | **`$font-weight-bold`** | **`$neutral-color-extradark`** | **`$neutral-color-extradark`** | **`$border-radius-sm`** | **`$border-width-thin`** **`$border-radius-pill`** **`$neutral-color-darkest`** | '----'                       | _[embed]_ |
+| Soft-rounded | Disabled | transparent                        | **`$font-family-base`** | **`$font-weight-bold`** | **`$neutral-color-dark`**      | **`$neutral-color-dark`**      | **`$border-radius-sm`** | '---'                                                                           | **`$opacity-level-intense`** | _[embed]_ |
+
+<br />
+
+### Com ícone - Estilo Soft-rounded
+
+| Variant      | State    | Container (Fill color)             | Text                    | Text Weight             | Text Color                     | Border Radius             | Outline (Weight / Border Radius / Stroke Color)                                 | Opacity                      | Exemplo   |
+| :----------- | :------- | :--------------------------------- | :---------------------- | :---------------------- | :----------------------------- | :------------------------ | :------------------------------------------------------------------------------ | :--------------------------- | :-------- |
+| Soft-rounded | Default  | transparent                        | **`$font-family-base`** | **`$font-weight-bold`** | **`$neutral-color-extradark`** | **`$border-radius-pill`** | '----'                                                                          | '----'                       | _[embed]_ |
+| Soft-rounded | Active   | **`$brand-color-primary-default`** | **`$font-family-base`** | **`$font-weight-bold`** | **`$standard-color-white`**    | **`$border-radius-pill`** | '----'                                                                          | '---'                        | _[embed]_ |
+| Soft-rounded | Hover    | **`$brand-color-primary-default`** | **`$font-family-base`** | **`$font-weight-bold`** | **`$standard-color-white`**    | **`$border-radius-pill`** | '---'                                                                           | '---'                        | _[embed]_ |
+| Soft-rounded | Focus    | **`$brand-color-primary-default`** | **`$font-family-base`** | **`$font-weight-bold`** | **`$neutral-color-extradark`** | **`$border-radius-pill`** | **`$border-width-thin`** **`$border-radius-pill`** **`$neutral-color-darkest`** | '----'                       | _[embed]_ |
+| Soft-rounded | Disabled | transparent                        | **`$font-family-base`** | **`$font-weight-bold`** | **`$neutral-color-dark`**      | **`$border-radius-pill`** | '---'                                                                           | **`$opacity-level-intense`** | _[embed]_ |
+
+<br />
+
+### Sem ícone - Estilo Solid-rounded
+
+| Variant       | State    | Container (Fill color)              | Text                    | Text Weight             | Text Color                   | Border Radius             | Outline (Weight / Border Radius / Stroke Color)                                 | Opacity                      | Exemplo   |
+| :------------ | :------- | :---------------------------------- | :---------------------- | :---------------------- | :--------------------------- | :------------------------ | :------------------------------------------------------------------------------ | :--------------------------- | :-------- |
+| Solid-rounded | Default  | transparent                         | **`$font-family-base`** | **`$font-weight-bold`** | **`$neutral-color-darkest`** | **`$border-radius-pill`** | '----'                                                                          | '----'                       | _[embed]_ |
+| Solid-rounded | Active   | **`$brand-color-primary-lightest`** | **`$font-family-base`** | **`$font-weight-bold`** | **`$neutral-color-darkest`** | **`$border-radius-pill`** | '----'                                                                          | '---'                        | _[embed]_ |
+| Solid-rounded | Hover    | **`$brand-color-primary-lightest`** | **`$font-family-base`** | **`$font-weight-bold`** | **`$neutral-color-darkest`** | **`$border-radius-pill`** | '---'                                                                           | '---'                        | _[embed]_ |
+| Solid-rounded | Focus    | **`$brand-color-primary-lightest`** | **`$font-family-base`** | **`$font-weight-bold`** | **`$neutral-color-darkest`** | **`$border-radius-pill`** | **`$border-width-thin`** **`$border-radius-pill`** **`$neutral-color-darkest`** | '----'                       | _[embed]_ |
+| Solid-rounded | Disabled | transparent                         | **`$font-family-base`** | **`$font-weight-bold`** | **`$neutral-color-dark`**    | **`$border-radius-pill`** | '---'                                                                           | **`$opacity-level-intense`** | _[embed]_ |
+
+<br />
+
+### Com ícone - Estilo Solid-rounded
+
+| Variant       | State    | Container (Fill color)              | Text                    | Text Weight             | Text Color                   | Icon Color                   | Border Radius             | Outline (Weight / Border Radius / Stroke Color)                                 | Opacity                      | Exemplo   |
+| :------------ | :------- | :---------------------------------- | :---------------------- | :---------------------- | :--------------------------- | :--------------------------- | :------------------------ | :------------------------------------------------------------------------------ | :--------------------------- | :-------- |
+| Solid-rounded | Default  | transparent                         | **`$font-family-base`** | **`$font-weight-bold`** | **`$neutral-color-darkest`** | **`$neutral-color-darkest`** | **`$border-radius-pill`** | '----'                                                                          | '----'                       | _[embed]_ |
+| Solid-rounded | Active   | **`$brand-color-primary-lightest`** | **`$font-family-base`** | **`$font-weight-bold`** | **`$neutral-color-darkest`** | **`$neutral-color-darkest`** | **`$border-radius-pill`** | '----'                                                                          | '---'                        | _[embed]_ |
+| Solid-rounded | Hover    | **`$brand-color-primary-lightest`** | **`$font-family-base`** | **`$font-weight-bold`** | **`$neutral-color-darkest`** | **`$neutral-color-darkest`** | **`$border-radius-pill`** | '---'                                                                           | '---'                        | _[embed]_ |
+| Solid-rounded | Focus    | **`$brand-color-primary-lightest`** | **`$font-family-base`** | **`$font-weight-bold`** | **`$neutral-color-darkest`** | **`$neutral-color-darkest`** | **`$border-radius-pill`** | **`$border-width-thin`** **`$border-radius-pill`** **`$neutral-color-darkest`** | '----'                       | _[embed]_ |
+| Solid-rounded | Disabled | transparent                         | **`$font-family-base`** | **`$font-weight-bold`** | **`$neutral-color-dark`**    | **`$neutral-color-dark`**    | **`$border-radius-pill`** | '---'                                                                           | **`$opacity-level-intense`** | _[embed]_ |
+
+<br />
+
+## Do
+
+1. Utilize letras maiúsculas apenas no início da frase apresentada
+2. Use labels concisos, fáceis de digitalizar e claros para indicar a ação a ser tomada pela pessoa usuária.
+
+<br />
+
+## Dont't
+
+1. Não utilize maiúsculas em todas as palavras ou letras.
+2. Não use labels longos e/ou redundantes, que dificultem a leitura da tab.

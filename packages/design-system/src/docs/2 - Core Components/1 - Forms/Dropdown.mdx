@@ -1,0 +1,30 @@
+# **Dropdown**
+
+**Dropdowns** apresentam uma lista de opções das quais um usuário pode selecionar uma opção ou várias. Uma opção selecionada pode representar um valor em um formulário ou pode ser usada como uma ação para filtrar ou classificar o conteúdo existente.
+
+<br />
+
+## Anatomy
+
+O Dropdown é formado com base no Select, Lista e Global Tokens.
+
+| State          | Size     | Container (Fill color)           | Icon                      | Text                    | Text Color (Placeholder)       | Icon Color                   | Icon Erro Color | Border Radius           | Border (Weight / Stroke Color)                               | Opacity                     | Exemplo   |
+| :------------- | :------- | :------------------------------- | :------------------------ | :---------------------- | :----------------------------- | :--------------------------- | :-------------- | :---------------------- | :----------------------------------------------------------- | :-------------------------- | :-------- |
+| Default        | sm md lg | **`$standard-color-white`**      | None Left Icon Right Icon | **`$font-family-base`** | **`$neutral-color-dark`**      | **`$neutral-color-darkest`** | '---'           | **`$border-radius-sm`** | **`$border-width-hairline`** **`$neutral-color-mediumdark`** | '----'                      | _[embed]_ |
+| Hover          | sm md lg | **`$standard-color-white`**      | None Left Icon Right Icon | **`$font-family-base`** | **`$neutral-color-dark`**      | **`$neutral-color-darkest`** | '---'           | **`$border-radius-sm`** | **`$border-width-hairline`** **`$neutral-color-darkest`**    | '----'                      | _[embed]_ |
+| Active / Focus | sm md lg | **`$neutral-color-lightest`**    | None Left Icon Right Icon | **`$font-family-base`** | **`$neutral-color-darkest`**   | **`$neutral-color-darkest`** | '----'          | **`$border-radius-sm`** | **`$border-width-thin`** **`$brand-color-primary-default`**  | '----'                      | _[embed]_ |
+| Open           | sm md lg | **`$neutral-color-lightest`**    | None Left Icon Right Icon | **`$font-family-base`** | **`$neutral-color-darkest`**   | **`$neutral-color-darkest`** | '----'          | **`$border-radius-sm`** | **`$border-width-thin`** **`$brand-color-primary-default`**  | '----'                      | _[embed]_ |
+| Populated      | sm md lg | **`$neutral-color-lightest`**    | None Left Icon Right Icon | **`$font-family-base`** | **`$neutral-color-extradark`** | **`$neutral-color-darkest`** | '---'           | **`$border-radius-sm`** | **`$border-width-hairline`** **`$neutral-color-darkest`**    | '----'                      | _[embed]_ |
+| Disabled       | sm md lg | **`$neutral-color-mediumlight`** | None Left Icon Right Icon | **`$font-family-base`** | **`$neutral-color-extradark`** | **`$neutral-color-darkest`** | '---'           | **`$border-radius-sm`** | **`$border-width-hairline`** **`$neutral-color-extradark`**  | **`$opacity-level-medium`** | _[embed]_ |
+
+<br />
+
+## Do
+
+1. Use para navegação ou menus de comando, onde uma ação é iniciada com base na seleção de um item, ou quando for preciso a aplicação de componentes na lista.
+
+<br />
+
+## Dont't
+
+1. Quando for de apenas uma escolha, para isso use o Select.

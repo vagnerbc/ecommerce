@@ -1,0 +1,28 @@
+# **Alert Dialog**
+
+O componente **Alert Dialog** é usado para interromper o usuário com uma confirmação ou ação obrigatória.
+
+<br />
+
+## Anatomy
+
+O **Alert Dialog** é formado com base nos Global Tokens.
+
+| Variant                                | Side (Fill color)           | Title                   | Title Weight               | Title Color                    | Text                    | Text Weight             | Text Color                     | Border Radius           | Shadow Style                 | Exemplo   |
+| :------------------------------------- | :-------------------------- | :---------------------- | :------------------------- | :----------------------------- | :---------------------- | :---------------------- | :----------------------------- | :---------------------- | :--------------------------- | :-------- |
+| Close Button: True Close Button: False | **`$standard-color-white`** | **`$font-family-base`** | **`$font-weight-regular`** | **`$neutral-color-extradark`** | **`$font-family-base`** | **`$font-weight-bold`** | **`$neutral-color-extradark`** | **`$border-radius-md`** | **`$shadow-primary-level1`** | _[embed]_ |
+
+<br />
+
+## Do
+
+Os alert dialogs devem ser usados em situações onde seja necessário:
+
+1. Mostrar avisos que não possam ser ignorados pelo usuário (ex: sair de uma tela sem salvar as informações editadas e outros).
+
+<br />
+
+## Dont't
+
+Os alert dialogs não devem ser utilizados como caixas de conteúdo seja ele consultivo ou editável ou de seleção. Em vez disso, utilize modal.
+Os alert dialogs não devem ser utilizados em situações que os avisos não sejam primordiais para o usuário, ou seja, pode ser ignorados.

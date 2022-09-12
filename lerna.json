@@ -1,0 +1,6 @@
+{
+  "packages": ["packages/pwa", "packages/design-system"],
+  "npmClient": "yarn",
+  "useWorkspaces": true,
+  "version": "1.0.0"
+}

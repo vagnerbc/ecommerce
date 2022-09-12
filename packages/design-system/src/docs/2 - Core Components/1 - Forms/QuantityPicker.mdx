@@ -1,0 +1,29 @@
+# **Quantity Picker**
+
+O **Quantity Picker** é utilizado para mensurar quantidades de itens, pode ser usar para produtos ou em outro componente que precise controlar quantidades
+
+<br />
+
+## Anatomy
+
+Os **quantity picker** são formados com base nos Global Tokens.
+
+| State          | Size     | Container (Fill color)           | Text                    | Text Weight             | Text Color                         | Icon Color                     | Border Radius           | Border (Weight / Stroke Color)                              | Outline (Weight / Border Radius / Stroke Color)                                 | Opacity                     | Exemplo   |
+| :------------- | :------- | :------------------------------- | :---------------------- | :---------------------- | ---------------------------------- | :----------------------------- | :---------------------- | :---------------------------------------------------------- | :------------------------------------------------------------------------------ | :-------------------------- | :-------- |
+| Default        | sm md lg | **`$standard-color-white`**      | **`$font-family-base`** | **`$font-weight-bold`** | **`$brand-color-primary-default`** | **`$neutral-color-darkest`**   | **`$border-radius-sm`** | **`$border-width-thin`** **`$standard-color-light`**        | '----'                                                                          | '----'                      | _[embed]_ |
+| Hover          | sm md lg | **`$standard-color-white`**      | **`$font-family-base`** | **`$font-weight-bold`** | **`$brand-color-primary-default`** | **`$neutral-color-darkest`**   | **`$border-radius-sm`** | **`$border-width-thin`** **`$neutral-color-darkest`**       | '----'                                                                          | '----'                      | _[embed]_ |
+| Active / Focus | sm md lg | **`$neutral-color-lightest`**    | **`$font-family-base`** | **`$font-weight-bold`** | **`$brand-color-primary-default`** | **`$neutral-color-darkest`**   | **`$border-radius-sm`** | **`$border-width-thin`** **`$brand-color-primary-default`** | **`$border-width-thin`** **`$border-radius-pill`** **`$neutral-color-darkest`** | '----'                      | embed     |
+| Invalid        | sm md lg | **`$neutral-color-lightest`**    | **`$font-family-base`** | **`$font-weight-bold`** | **`$feedback-color-error-dark`**   | **`$neutral-color-darkest`**   | **`$border-radius-sm`** | **`$border-width-thin`** **`$feedback-color-error-dark`**   | '---'                                                                           | '---'                       | _[embed]_ |
+| Disabled       | sm md lg | **`$neutral-color-mediumlight`** | **`$font-family-base`** | **`$font-weight-bold`** | **`$neutral-color-extradark`**     | **`$neutral-color-extradark`** | **`$border-radius-sm`** | **`$border-width-hairline`** **`$neutral-color-extradark`** | '---'                                                                           | **`$opacity-level-medium`** | _[embed]_ |
+
+<br />
+
+## Do
+
+Use para controlar quantidade de itens, exemplo quantidade de produtos no carrinho.
+
+<br />
+
+## Dont't
+
+Não use para fazer controle de escala etc.
