@@ -1,5 +1,5 @@
 {
-  "packages": ["packages/pwa", "packages/design-system"],
+  "packages": ["packages/pwa", "packages/design-system", "packages/api"],
   "npmClient": "yarn",
   "useWorkspaces": true,
   "version": "1.0.0"

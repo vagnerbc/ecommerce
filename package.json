@@ -5,6 +5,7 @@
   "workspaces": {
     "packages": [
       "packages/design-system",
+      "packages/api",
       "packages/pwa"
     ]
   },
@@ -14,6 +15,7 @@
     "clean": "npx lerna clean --yes && rm -rf /tmp/metro-*",
     "clean:root": "npx lerna clean --yes && rm -rf node_modules && rm -rf /tmp/metro-*",
     "run:pwa": "cd packages/pwa && yarn dev",
+    "run:api": "cd packages/api && yarn dev",
     "fix:lint": "npx lerna run fix:lint",
     "check:lint": "npx lerna run check:lint",
     "prettify": "npx lerna run prettify",
