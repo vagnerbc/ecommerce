@@ -8,11 +8,39 @@ import { StoreMockBuilder } from 'store/__mock__'
 import { StateMockBuilder } from 'store/__mock__/state-mock-builder'
 import { State } from 'store/ducks'
 import { QueryClient, QueryClientProvider } from 'react-query'
+import {
+  ControllerFieldState,
+  ControllerProps,
+  FieldValues,
+  UseFormStateReturn
+} from 'react-hook-form'
 
 const queryClient = new QueryClient()
 
 interface CustomRenderOptions extends RenderOptions {
   initialState: State
+}
+
+type FormControllerMockProps = ControllerProps & {
+  onChangeSpy?: () => void
+}
+
+const FormControllerMock = (props: FormControllerMockProps) => {
+  return (
+    <>
+      {props.render({
+        field: {
+          onChange: props.onChangeSpy || jest.fn(),
+          name: props.name,
+          onBlur: jest.fn(),
+          value: props.defaultValue || null,
+          ref: jest.fn()
+        },
+        fieldState: {} as ControllerFieldState,
+        formState: {} as UseFormStateReturn<FieldValues>
+      })}
+    </>
+  )
 }
 
 export const wrapperProvider = (initialState: State) => {
@@ -59,5 +87,6 @@ export {
   customRenderHook as renderHook,
   renderHook as baseRenderHook,
   act as hookAct,
-  userEvent
+  userEvent,
+  FormControllerMock
 }

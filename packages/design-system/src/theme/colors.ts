@@ -7,18 +7,18 @@ const standard = {
 }
 
 const brand = {
-  'primary-extralightest': '#FFF5EF',
-  'primary-lightest': '#FF995A',
-  'primary-light': '#FF7D2D',
-  'primary-default': '#E85A00',
-  'primary-default-40': rgba('#E85A00', 0.4),
-  'primary-dark': '#BA4700',
-  'primary-darkest': '#903700',
-  'secondary-lightest': '#888CCB',
-  'secondary-light': '#45407F',
-  'secondary-default': '#2E2867',
-  'secondary-dark': '#18134B',
-  'secondary-darkest': '#0A062F'
+  'primary-extralightest': '#D3D3E5',
+  'primary-lightest': '#6366A4',
+  'primary-light': '#7072AB',
+  'primary-default': '#2A2D83',
+  'primary-default-40': rgba('#2A2D83', 0.4),
+  'primary-dark': '#2A2D83',
+  'primary-darkest': '#2A2D83',
+  'secondary-lightest': '#D34957',
+  'secondary-light': '#D12D3D',
+  'secondary-default': '#DF051C',
+  'secondary-dark': '#B61122',
+  'secondary-darkest': '#980F1D'
 }
 
 const inverseBrand = {

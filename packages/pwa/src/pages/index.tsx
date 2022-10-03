@@ -1,17 +1,18 @@
-import { Box, Button } from '@ecommerce/design-system'
+import { HomePage } from 'components/pages/home'
 import type { NextPage } from 'next'
+import Head from 'next/head'
 
 const Home: NextPage = () => {
   return (
-    <Box
-      width="100vw"
-      height="100vh"
-      bgColor="brand.primary-default"
-      overflow="hidden"
-    >
-      Home
-      <Button>teste</Button>
-    </Box>
+    <>
+      <Head>
+        <title>ECommerce</title>
+        <meta name="description" content="BackOffice" />
+        <link rel="icon" href="/favicon.ico" />
+      </Head>
+
+      <HomePage />
+    </>
   )
 }
 

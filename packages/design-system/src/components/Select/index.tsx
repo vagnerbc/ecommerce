@@ -41,8 +41,9 @@ export const Select = forwardRef<Props, 'input'>((props, ref) => {
     ...menuButtonProps
   } = props
 
-  const [selectedOption, setSelectedOption] =
-    useState<SelectOption | undefined>()
+  const [selectedOption, setSelectedOption] = useState<
+    SelectOption | undefined
+  >()
   const [isOpen, setIsOpen] = useState(false)
   const [optionsWidth, setOptionsWidth] = useState(0)
   const buttonRef = useRef<HTMLButtonElement>(null)

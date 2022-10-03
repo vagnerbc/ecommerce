@@ -15,10 +15,10 @@ const resetPasswordController = makeResetPasswordController()
 const router = Router()
 
 router.get('/', (req, res) => {
-  res.json({ message: 'Happy' })
+  res.json({ message: 'Server UP' })
 })
 
-router.post('/authenticate', (request, response) =>
+router.post('/auth', (request, response) =>
   authenticateController.handle(request, response)
 )
 router.post('/forgot_password', (request, response) =>

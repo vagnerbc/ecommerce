@@ -6,7 +6,7 @@ const runtimeCaching = require('next-pwa/cache')
 const webpack = require('webpack')
 
 const envPaths = new Map([
-  ['development', '.env.dev'],
+  ['development', '.env'],
   ['staging', '.env.stg'],
   ['production', '.env.prd'],
   ['test', '.env.test']
@@ -29,9 +29,12 @@ const moduleExports = {
       config.plugins.push(new webpack.EnvironmentPlugin(myEnv))
       return config
     }
-  })
+  }),
+  output: 'standalone',
 };
+
 const sentryWebpackPluginOptions = {
   silent: true
 };
+
 module.exports = withSentryConfig(moduleExports, sentryWebpackPluginOptions);

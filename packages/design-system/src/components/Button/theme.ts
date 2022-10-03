@@ -33,6 +33,11 @@ const variants: VariantStyles = {
     color: 'standard.white',
     bgColorHover: 'brand.primary-light'
   }),
+  'brand-secondary-solid': getSolidStyles({
+    bgColor: 'brand.secondary-default',
+    color: 'standard.white',
+    bgColorHover: 'brand.secondary-light'
+  }),
   'default-outline': getOutlineStyles({
     border: '1px solid',
     borderColor: 'neutral.mediumdark',

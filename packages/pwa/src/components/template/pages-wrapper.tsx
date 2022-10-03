@@ -1,9 +1,10 @@
 import { ThemeProvider } from '@ecommerce/design-system'
 import { AppProps } from 'next/app'
-import { memo } from 'react'
 
 import '@ecommerce/design-system/src/styles/index.css'
 import { QueryClient, QueryClientProvider } from 'react-query'
+import { RouteGuard } from './route-guard'
+import { AuthProvider } from 'contexts/auth'
 
 const queryClient = new QueryClient({
   defaultOptions: { queries: { refetchOnWindowFocus: false } }
@@ -15,10 +16,14 @@ const PagesWrapper = ({ Component, pageProps }: AppProps) => {
   return (
     <QueryClientProvider client={queryClient}>
       <ThemeProvider>
-        <AnyComponent {...pageProps} />
+        <AuthProvider>
+          <RouteGuard>
+            <AnyComponent {...pageProps} />
+          </RouteGuard>
+        </AuthProvider>
       </ThemeProvider>
     </QueryClientProvider>
   )
 }
 
-export default memo(PagesWrapper)
+export default PagesWrapper

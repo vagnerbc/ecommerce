@@ -8,9 +8,8 @@ declare namespace NodeJS {
   interface ProcessEnv {
     NODE_ENV: 'development' | 'production' | 'test'
     APP_NAME: string
-    DB_VERSION: number
-    B2B_URI: string
-    API_BASE_URL: string
+    API_ENDPOINT: strings
+    API_KEY: string
     KEYCLOAK_CLIENT_ID: string
     GOOGLE_ANALYTICS_TRACKING_ID: string
     GOOGLE_ANALYTICS_DIMENSIONS: string
