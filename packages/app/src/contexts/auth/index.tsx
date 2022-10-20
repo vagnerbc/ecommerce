@@ -1,7 +1,7 @@
 /* eslint-disable no-console */
-import { User } from '@sentry/nextjs'
+import { useNavigation } from '@react-navigation/native'
 import { useMutationAuth } from 'hooks/queries/auth'
-import { useRouter } from 'next/router'
+import { User } from 'models/user'
 import { createContext, useContext, useEffect, useState } from 'react'
 import { AuthPayload } from 'services/auth'
 
@@ -22,7 +22,7 @@ export const AuthProvider = ({ children }: Props) => {
   const [logged, setLogged] = useState<boolean>(false)
   const [user, setUser] = useState<User | null>(null)
 
-  const router = useRouter()
+  const navigation = useNavigation()
 
   useEffect(() => {
     const isLogged = localStorage.getItem('access_token')
@@ -34,7 +34,7 @@ export const AuthProvider = ({ children }: Props) => {
   const logout = () => {
     setLogged(false)
     localStorage.clear()
-    router.push('/login')
+    navigation.navigate('Login')
   }
 
   const login = async (payload: AuthPayload) => {

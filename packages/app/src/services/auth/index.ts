@@ -1,5 +1,5 @@
-import { User } from '@sentry/nextjs'
 import { AxiosResponse } from 'axios'
+import { User } from 'models/user'
 import { axiosInstance } from 'services'
 
 export type AuthPayload = {
