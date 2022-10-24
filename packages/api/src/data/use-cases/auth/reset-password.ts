@@ -1,4 +1,5 @@
 /* eslint-disable no-useless-constructor */
+
 import { ResetPassword } from 'api/src/domain/use-cases/auth/reset-password'
 
 import { Cryptography } from '../../protocols/cryptgraphy/cryptography'

@@ -4,7 +4,6 @@
   "main": "src/presentation/server.ts",
   "scripts": {
     "dev": "ts-node-dev --transpile-only --ignore-watch node_modules src/presentation/server.ts",
-    "typeorm": "ts-node-dev ../../node_modules/typeorm/cli.js",
     "fix:lint": "eslint --fix ./src --ext .ts,.tsx",
     "check:lint": "eslint ./src --ext .ts,.tsx",
     "prettify": "prettier --write ./src",

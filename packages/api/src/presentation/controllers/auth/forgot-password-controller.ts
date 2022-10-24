@@ -1,5 +1,6 @@
-import { ForgotPassword } from 'api/src/domain/use-cases/auth/forgot-password'
 import { Request, Response } from 'express'
+
+import { ForgotPassword } from '../../../domain/use-cases/auth/forgot-password'
 
 export class ForgotPasswordController {
   constructor(private readonly forgotPasswordUseCase: ForgotPassword) {}

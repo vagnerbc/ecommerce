@@ -1,5 +1,6 @@
-import { ResetPassword } from 'api/src/domain/use-cases/auth/reset-password'
 import { Request, Response } from 'express'
+
+import { ResetPassword } from '../../../domain/use-cases/auth/reset-password'
 
 export class ResetPasswordController {
   constructor(private readonly resetPasswordUseCase: ResetPassword) {}

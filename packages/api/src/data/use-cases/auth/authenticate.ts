@@ -1,6 +1,5 @@
 /* eslint-disable no-useless-constructor */
-import { Authenticate } from 'api/src/domain/use-cases/auth/authenticate'
-
+import { Authenticate } from '../../../domain/use-cases/auth/authenticate'
 import { UserRepository } from '../../protocols/db/user/repository'
 import { TokenGenerator } from '../../protocols/token/generator'
 
@@ -21,7 +20,14 @@ export class AuthenticateDB implements Authenticate {
 
     const token = this.jwtGenerator.generate({ id: user.id })
 
-    return { user, token }
+    return {
+      user: {
+        id: user.id,
+        name: user.name,
+        email: user.email
+      },
+      token
+    }
   }
 }
 

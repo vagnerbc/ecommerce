@@ -6,15 +6,15 @@ import { User } from '../../../domain/entities/user'
 export class UserPrismaRepository implements UserRepository {
   private prisma = new PrismaClient()
 
-  async create(user: User): Promise<void> {
+  async create(data: Partial<User>): Promise<void> {
     await this.prisma.user.create({
       data: {
-        id: user.id,
-        name: user.name,
-        email: user.email,
-        password: user.password ?? '',
-        password_reset_token: user.password_reset_token,
-        password_reset_expires: user.password_reset_expires
+        id: data.id,
+        name: data.name ?? '',
+        email: data.email ?? '',
+        password: data.password ?? '',
+        password_reset_token: data.password_reset_token,
+        password_reset_expires: data.password_reset_expires
       }
     })
   }
@@ -32,7 +32,7 @@ export class UserPrismaRepository implements UserRepository {
       {
         name: user.name,
         email: user.email,
-        password: null,
+        password: user.password,
         password_reset_token: user.password_reset_token,
         password_reset_expires: user.password_reset_expires
       },
