@@ -1,4 +1,4 @@
-import { ResetPasswordController } from '../../../presentation/controllers/forgot-password-controller'
+import { ResetPasswordController } from '../../../presentation/controllers/reset-password-controller'
 import { makeResetPasswordUseCase } from '../use-cases/reset-password-factory'
 
 export const makeResetPasswordController = () => {
