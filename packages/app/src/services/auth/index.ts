@@ -12,17 +12,21 @@ export type AuthResponse = {
   token: string
 }
 
+export type AuthError = {
+  error: string
+}
+
 export const AuthService = {
-  auth: ({
+  auth: async ({
     email,
     password
   }: AuthPayload): Promise<AxiosResponse<AuthResponse>> => {
-    return axiosInstance.post('/auth', {
+    return await axiosInstance.post('/auth', {
       email,
       password
     })
   },
-  get: (email: string) => {
-    return axiosInstance.get('/auth', { params: email })
+  get: async (email: string) => {
+    return await axiosInstance.get('/auth', { params: email })
   }
 }

@@ -1,15 +1,18 @@
 /* eslint-disable no-console */
+import AsyncStorage from '@react-native-async-storage/async-storage'
 import { useNavigation } from '@react-navigation/native'
+import { AxiosError } from 'axios'
 import { useMutationAuth } from 'hooks/queries/auth'
 import { User } from 'models/user'
 import { createContext, useContext, useEffect, useState } from 'react'
-import { AuthPayload } from 'services/auth'
+import { AuthError, AuthPayload } from 'services/auth'
 
 export type ContextType = {
   user: any
   logged: boolean
   login: (payload: AuthPayload) => Promise<void>
   logout: () => void
+  error: string
 }
 
 export const Context = createContext<ContextType>({} as ContextType)
@@ -21,11 +24,12 @@ type Props = {
 export const AuthProvider = ({ children }: Props) => {
   const [logged, setLogged] = useState<boolean>(false)
   const [user, setUser] = useState<User | null>(null)
+  const [error, setError] = useState<string>('')
 
   const navigation = useNavigation()
 
   useEffect(() => {
-    const isLogged = localStorage.getItem('access_token')
+    const isLogged = AsyncStorage.getItem('access_token')
     setLogged(!!isLogged)
   }, [])
 
@@ -33,25 +37,31 @@ export const AuthProvider = ({ children }: Props) => {
 
   const logout = () => {
     setLogged(false)
-    localStorage.clear()
-    navigation.navigate('Login')
+    AsyncStorage.clear()
+    // navigation.navigate('Login')
   }
 
   const login = async (payload: AuthPayload) => {
     console.log('AuthProvider: Obtendo o token')
 
-    const { user, token } = await mutateAuth.mutateAsync(payload)
+    try {
+      const { user, token } = await mutateAuth.mutateAsync(payload)
 
-    console.log('AuthProvider: setLogged(true)')
+      console.log('AuthProvider: setLogged(true)')
 
-    localStorage.setItem('user', JSON.stringify(user))
-    localStorage.setItem('access_token', token)
-    setUser(user)
-    setLogged(true)
+      AsyncStorage.setItem('user', JSON.stringify(user))
+      AsyncStorage.setItem('access_token', token)
+      setUser(user)
+      setLogged(true)
+    } catch (error) {
+      const err = error as AxiosError<AuthError>
+      console.log('AuthProvider: error', err.response.data.error)
+      setError(err.response.data.error)
+    }
   }
 
   return (
-    <Context.Provider value={{ logged, login, logout, user }}>
+    <Context.Provider value={{ logged, login, logout, user, error }}>
       {children}
     </Context.Provider>
   )

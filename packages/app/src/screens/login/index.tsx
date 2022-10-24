@@ -17,7 +17,7 @@ type Inputs = {
 }
 
 export const LoginScreen = () => {
-  const { login } = useAuth()
+  const { login, error } = useAuth()
 
   const {
     control,
@@ -50,6 +50,12 @@ export const LoginScreen = () => {
         </Text>
 
         <VStack space="md">
+          {error && (
+            <Text fontSize="xxxs" color="red.500" fontWeight="bold">
+              {error}
+            </Text>
+          )}
+
           <FormControl isInvalid={!!errors.email}>
             <Controller
               name="email"
@@ -66,7 +72,7 @@ export const LoginScreen = () => {
                 />
               )}
             />
-            <FormErrorMessage fontSize="smaller">
+            <FormErrorMessage fontSize="xxxs">
               {errors.email?.message}
             </FormErrorMessage>
           </FormControl>
@@ -88,7 +94,7 @@ export const LoginScreen = () => {
                 />
               )}
             />
-            <FormErrorMessage fontSize="smaller">
+            <FormErrorMessage fontSize="xxxs">
               {errors.password?.message}
             </FormErrorMessage>
           </FormControl>
