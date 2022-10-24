@@ -1,20 +1,26 @@
 import { NavigationContainer } from '@react-navigation/native'
 import { createNativeStackNavigator } from '@react-navigation/native-stack'
-import { AuthProvider } from 'contexts/auth'
+import { useAuth } from 'contexts/auth'
 import { HomeScreen } from 'screens/home'
 import { LoginScreen } from 'screens/login'
 
 const Stack = createNativeStackNavigator()
 
 export const Routes = () => {
+  const { isLogged } = useAuth()
   return (
     <NavigationContainer>
-      <AuthProvider>
-        <Stack.Navigator screenOptions={{ headerShown: false }}>
+      <Stack.Navigator screenOptions={{ headerShown: false }}>
+        {isLogged ? (
+          <Stack.Screen
+            name="/"
+            component={HomeScreen}
+            options={{ headerShown: true, headerTitle: '' }}
+          />
+        ) : (
           <Stack.Screen name="Login" component={LoginScreen} />
-          <Stack.Screen name="Home" component={HomeScreen} />
-        </Stack.Navigator>
-      </AuthProvider>
+        )}
+      </Stack.Navigator>
     </NavigationContainer>
   )
 }

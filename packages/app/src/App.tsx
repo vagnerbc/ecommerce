@@ -1,3 +1,4 @@
+import { AuthProvider } from 'contexts/auth'
 import { NativeBaseProvider } from 'native-base'
 import React from 'react'
 import { QueryClient, QueryClientProvider } from 'react-query'
@@ -10,7 +11,9 @@ export default function App() {
   return (
     <NativeBaseProvider theme={theme}>
       <QueryClientProvider client={queryClient}>
-        <Routes />
+        <AuthProvider>
+          <Routes />
+        </AuthProvider>
       </QueryClientProvider>
     </NativeBaseProvider>
   )

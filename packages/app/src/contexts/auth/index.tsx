@@ -1,6 +1,5 @@
 /* eslint-disable no-console */
 import AsyncStorage from '@react-native-async-storage/async-storage'
-import { useNavigation } from '@react-navigation/native'
 import { AxiosError } from 'axios'
 import { useMutationAuth } from 'hooks/queries/auth'
 import { User } from 'models/user'
@@ -9,7 +8,7 @@ import { AuthError, AuthPayload } from 'services/auth'
 
 export type ContextType = {
   user: any
-  logged: boolean
+  isLogged: boolean
   login: (payload: AuthPayload) => Promise<void>
   logout: () => void
   error: string
@@ -22,23 +21,25 @@ type Props = {
 }
 
 export const AuthProvider = ({ children }: Props) => {
-  const [logged, setLogged] = useState<boolean>(false)
+  const [isLogged, setIsLogged] = useState<boolean>(false)
   const [user, setUser] = useState<User | null>(null)
   const [error, setError] = useState<string>('')
 
-  const navigation = useNavigation()
-
   useEffect(() => {
-    const isLogged = AsyncStorage.getItem('access_token')
-    setLogged(!!isLogged)
+    const isLogged = async () => {
+      const accessToken = await AsyncStorage.getItem('access_token')
+      console.log({ accessToken })
+      setIsLogged(!!accessToken)
+    }
+
+    isLogged()
   }, [])
 
   const mutateAuth = useMutationAuth()
 
-  const logout = () => {
-    setLogged(false)
-    AsyncStorage.clear()
-    // navigation.navigate('Login')
+  const logout = async () => {
+    setIsLogged(false)
+    await AsyncStorage.clear()
   }
 
   const login = async (payload: AuthPayload) => {
@@ -49,10 +50,10 @@ export const AuthProvider = ({ children }: Props) => {
 
       console.log('AuthProvider: setLogged(true)')
 
-      AsyncStorage.setItem('user', JSON.stringify(user))
-      AsyncStorage.setItem('access_token', token)
+      await AsyncStorage.setItem('user', JSON.stringify(user))
+      await AsyncStorage.setItem('access_token', token)
       setUser(user)
-      setLogged(true)
+      setIsLogged(true)
     } catch (error) {
       const err = error as AxiosError<AuthError>
       console.log('AuthProvider: error', err.response.data.error)
@@ -61,7 +62,7 @@ export const AuthProvider = ({ children }: Props) => {
   }
 
   return (
-    <Context.Provider value={{ logged, login, logout, user, error }}>
+    <Context.Provider value={{ isLogged, login, logout, user, error }}>
       {children}
     </Context.Provider>
   )
