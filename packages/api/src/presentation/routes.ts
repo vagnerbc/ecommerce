@@ -5,6 +5,7 @@ import { makeForgotPasswordController } from '../main/factories/controllers/forg
 import { makeResetPasswordController } from '../main/factories/controllers/reset-password-controller-factory'
 
 import AuthMiddleware from './middlewares/auth'
+import LogginMiddleware from './middlewares/logging'
 
 const authenticateController = makeAuthenticationController()
 
@@ -13,6 +14,8 @@ const forgotPasswordController = makeForgotPasswordController()
 const resetPasswordController = makeResetPasswordController()
 
 const router = Router()
+
+router.use(LogginMiddleware)
 
 router.get('/', (req, res) => {
   res.json({ message: 'Server UP' })

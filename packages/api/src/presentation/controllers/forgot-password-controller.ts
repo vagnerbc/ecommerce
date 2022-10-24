@@ -1,14 +1,14 @@
-import { ResetPassword } from 'api/src/domain/use-cases/auth/reset-password'
+import { ForgotPassword } from 'api/src/domain/use-cases/auth/forgot-password'
 import { Request, Response } from 'express'
 
-export class ResetPasswordController {
-  constructor(private readonly resetPasswordUseCase: ResetPassword) {}
+export class ForgotPasswordController {
+  constructor(private readonly forgotPasswordUseCase: ForgotPassword) {}
 
   async handle(req: Request, res: Response) {
-    const { email, token, password } = req.body
+    const { email } = req.body
 
     try {
-      await this.resetPasswordUseCase.exec(email, token, password)
+      await this.forgotPasswordUseCase.exec(email)
 
       return res.status(200).send()
     } catch (error: any) {
