@@ -1,9 +1,9 @@
-import { Flex, Text } from '@ecommerce/design-system'
+import { Button, Flex, Text } from '@ecommerce/design-system'
 import { VStack } from '@ecommerce/design-system/src/components/Stack'
 import { useAuth } from 'contexts/auth'
 
 export const HomePage = () => {
-  const { user } = useAuth()
+  const { user, logout } = useAuth()
 
   return (
     <Flex
@@ -23,6 +23,7 @@ export const HomePage = () => {
         <Text fontSize="xl" color="white" fontWeight="bold">
           Welcome, {user?.name}
         </Text>
+        <Button onClick={() => logout()}>Logout</Button>
       </VStack>
     </Flex>
   )

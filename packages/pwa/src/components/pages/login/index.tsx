@@ -3,13 +3,15 @@ import {
   Flex,
   FormControl,
   FormErrorMessage,
+  HStack,
   Input,
   Text,
-  VStack,
-  HStack
+  VStack
 } from '@ecommerce/design-system'
 import { useAuth } from 'contexts/auth'
 import { translate } from 'internationalization'
+import { useRouter } from 'next/router'
+import { useEffect } from 'react'
 import { Controller, SubmitHandler, useForm } from 'react-hook-form'
 
 type Inputs = {
@@ -18,7 +20,9 @@ type Inputs = {
 }
 
 export const LoginPage = () => {
-  const { login } = useAuth()
+  const { login, error, logged } = useAuth()
+  const router = useRouter()
+  const { returnUrl } = router.query
 
   const {
     register,
@@ -30,6 +34,12 @@ export const LoginPage = () => {
   const onSubmit: SubmitHandler<Inputs> = data => {
     login(data)
   }
+
+  useEffect(() => {
+    if (logged) {
+      router.push((returnUrl as string) || '/')
+    }
+  }, [logged])
 
   return (
     <Flex
@@ -47,11 +57,16 @@ export const LoginPage = () => {
         shadow="2xl"
       >
         <Text fontSize="xl" color="white" fontWeight="bold">
-          Backoffice
+          ECOMMERCE
         </Text>
 
         <form onSubmit={handleSubmit(onSubmit)}>
           <VStack>
+            {error && (
+              <Text fontSize="xxxs" color="red.500" fontWeight="bold">
+                {error}
+              </Text>
+            )}
             <FormControl id="email" isInvalid={!!errors.email}>
               <Input
                 {...register('email', {

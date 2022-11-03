@@ -12,6 +12,10 @@ export type AuthResponse = {
   token: string
 }
 
+export type AuthError = {
+  error: string
+}
+
 export const AuthService = {
   auth: ({
     email,

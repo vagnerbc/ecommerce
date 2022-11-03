@@ -1,10 +1,11 @@
 import { ThemeProvider } from '@ecommerce/design-system'
+import { AuthProvider } from 'contexts/auth'
 import { AppProps } from 'next/app'
+import { QueryClient, QueryClientProvider } from 'react-query'
+
+import { RouteGuard } from './route-guard'
 
 import '@ecommerce/design-system/src/styles/index.css'
-import { QueryClient, QueryClientProvider } from 'react-query'
-import { RouteGuard } from './route-guard'
-import { AuthProvider } from 'contexts/auth'
 
 const queryClient = new QueryClient({
   defaultOptions: { queries: { refetchOnWindowFocus: false } }
